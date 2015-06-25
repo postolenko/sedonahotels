@@ -19,8 +19,8 @@
     }
 
     .navigation li {
-        display: block;
-        vertical-align: middle;
+       /* display: inline-block;
+        vertical-align: middle;*/
         width: 100%;
         padding: 0;
     }
