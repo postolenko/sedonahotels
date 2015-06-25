@@ -193,8 +193,8 @@ header {
 }
 
 .logo a {
-    /*position: fixed;*/
-    position: absolute;
+    position: fixed;
+    /*position: absolute;*/
     top: -13px;
     left: 0;
     display: block;
