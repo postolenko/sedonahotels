@@ -28,27 +28,6 @@ var searchBoxMargin;
 	});
 		
 
-
-// 	function getWrapperWidthSafariWindows() {	    
-// var ua = navigator.userAgent;
-// 		if (ua.search(/Safari/) > 0) {
-// 			$(".wrapper").css({"width": $(window).width() + "px"});
-
-// 	    	if($(window).width() < 680) {
-
-// 				$(".navigation li, .blockquote-reason, .visit-s, .social-icons, .logo-footer").css({"width": 100 + "%"});
-
-// 	    	} else {
-	    		
-// 	    		$(".navigation li").css({"width": 19.6 + "%"});
-// 	    		$(".blockquote-reason").css({"width": 32.7 + "%"});
-// 	    		$(".visit-s, .social-icons, .logo-footer").css({"width": 33 + "%"});
-
-// 	    	}	   
-// 	    }
-// 	}
-
-
 	$(function() {
 
 
@@ -63,18 +42,6 @@ var searchBoxMargin;
 					$(".search-ht-form ").css({"top": $(window).height()/2 - $(".form form").height()/2 + "px"});
 					$(".adult-h").css({"width": $(".date-text").outerWidth(true) + "px"});
 				});
-
-				// $(function() {
-
-				// 	$( "#datepicker_to, #datepicker_of" ).datepicker();
-
-				// 	$( "#anim" ).change(function() {
-
-				// 		$( "#datepicker_to, #datepicker_of" ).datepicker( "option", "showAnim", $( this ).val() );
-
-				// 	});
-				
-				// });
 
 				$(function() {
 
@@ -175,42 +142,42 @@ var searchBoxMargin;
 			}
 
 
-			// if( $(window).width() <= 680 ){
+			if( $(window).width() <= 680 ){
 
-			// 	// var percentReasonContnet = 47;
-			// 	var percentReasonBg = 52;
+				var percentReasonContnet = 47;
+				var percentReasonBg = 52;
 
-			// } else {
+			} else {
 
-			// 	// var percentReasonContnet = 33;
-			// 	var percentReasonBg = 66;
+				var percentReasonContnet = 33;
+				var percentReasonBg = 66;
 
-			// }
+			}
 
 
-			// $(".reason-content").css({"width": percentReasonContnet * onePercentOfRow + "px"});
-			// $(".reason-content").css({"width": percentReasonContnet + "%"});
+			$(".reason-content").css({"width": percentReasonContnet * onePercentOfRow + "px"});
+			$(".reason-content").css({"width": percentReasonContnet + "%"});
 
-			// if( leftCoor <= 0 ) {
+			if( leftCoor <= 0 ) {
 
-			// 	$(".reason-content").css({"margin": 0 + "px"});
+				$(".reason-content").css({"margin": 0 + "px"});
 
-			// }
+			}
 
-			// $(".reason-bg:eq("+ index +")").css({"width": percentReasonBg * onePercentOfRow + leftCoor + "px"});
+			$(".reason-bg:eq("+ index +")").css({"width": percentReasonBg * onePercentOfRow + leftCoor + "px"});
 			
-			// $(".reason-bg:eq("+ index +")").css({"width": $(".row").width() - $(".reason-content").outerWidth(true) + leftCoor + "px"});
-
-
-			// $(".reason-bg:eq("+ index +")").css({"width": ( $(window).width() - $(".reason-content").outerWidth(true) ) - leftCoor + "px"});
-
-			// var reasonContent =  document.getElementsByClassName("reason-content")[index];
-
-			var reasonContentHeight = $(".reason-content:eq("+ index +")").height();
-
-			$(".reason-bg:eq("+ index +")").outerHeight( reasonContentHeight );
-
 			$(".reason-bg:eq("+ index +")").css({"width": $(".row").width() - $(".reason-content").outerWidth(true) + leftCoor + "px"});
+
+
+			$(".reason-bg:eq("+ index +")").css({"width": ( $(window).width() - $(".reason-content").outerWidth(true) ) - leftCoor + "px"});
+
+			var reasonContent =  document.getElementsByClassName("reason-content")[index];
+
+			// var reasonContentHeight = $(".reason-content:eq("+ index +")").height();
+
+			// $(".reason-bg:eq("+ index +")").outerHeight( reasonContentHeight );
+
+			// $(".reason-bg:eq("+ index +")").css({"width": $(".row").width() - $(".reason-content").outerWidth(true) + leftCoor + "px"});
 
 
 		});
