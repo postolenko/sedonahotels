@@ -349,7 +349,7 @@ var searchBoxMargin;
 		} else {
 			$("header").height($("header .navigation").outerHeight(true));
 			// searchBoxMargin = $("header").height();
-			searchBoxMargin = $("header .navigation").outerHeight(true);
+			searchBoxMargin = $("header .navigation").outerHeight();
 
 		}
 
