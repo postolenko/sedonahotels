@@ -54,7 +54,7 @@
         display: block;
         vertical-align: middle;
         text-align: left;
-        min-width: 100%;
+        /*min-width: 100%;*/
         padding: 7px 0px 7px 15px;
     }
 
