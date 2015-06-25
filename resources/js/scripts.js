@@ -160,7 +160,7 @@ var searchBoxMargin;
 
 			}
 
-			// $(".reason-bg:eq("+ index +")").css({"width": percentReasonBg * onePercentOfRow + leftCoor + "px"});
+			$(".reason-bg:eq("+ index +")").css({"width": percentReasonBg * onePercentOfRow + leftCoor + "px"});
 			
 			// $(".reason-bg:eq("+ index +")").css({"width": $(".row").width() - $(".reason-content").outerWidth(true) + leftCoor + "px"});
 
