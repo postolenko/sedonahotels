@@ -355,7 +355,7 @@ var searchBoxMargin;
 
 		// пересмотреть sedona hotels
 
-		$('body').css({"padding-top": searchBoxMargin + "px"});
+		$('body').css({"padding-top": 56 + "px"});
 
 	}
 
