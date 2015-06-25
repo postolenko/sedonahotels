@@ -211,8 +211,6 @@ footer {
     -moz-box-shadow:    0px -5px 10px 0px rgba(0, 0, 0, 0.37);
     box-shadow:         0px -5px 10px 0px rgba(0, 0, 0, 0.37);
 
-    /*display: table-row;*/
-
 }
 
 .visit-s,
@@ -228,7 +226,7 @@ footer {
     line-height: 26px;
     text-transform: uppercase;
     font-weight: bold;
-    padding-left: 63px;    
+    padding-left: 63px;
 }
 
 .social-icons {
