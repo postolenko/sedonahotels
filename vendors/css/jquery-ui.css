@@ -36,8 +36,6 @@ body .ui-tooltip { border-width: 2px; }
 }
 .ui-widget-content::after {
   content: "";
-  background-color: #fff;
-  /*height: 2px;*/
   border: 1px solid #fff;
   opacity: 0.5;
   top: 0px;
@@ -50,7 +48,6 @@ body .ui-tooltip { border-width: 2px; }
 
 .ui-widget-content a { color: #333333; }
 .ui-widget-header { border: 1px solid #ffffff; color: #ffffff; font-weight: bold; }
-/*.ui-widget-header { border: 1px solid #e78f08; background: #f6a828 url("images/ui-bg_gloss-wave_35_f6a828_500x100.png") 50% 50% repeat-x; color: #ffffff; font-weight: bold; }*/
 .ui-widget-header a { color: #ffffff; }
 
 /* Interaction states
