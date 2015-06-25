@@ -199,7 +199,7 @@ header {
     top: -13px;
     left: 0;
     display: block;
-    width: 100%;
+    /*width: 100%;*/
     min-width: 140px;
     height: 73px;
     background: url(../img/logo.png) no-repeat top center;
