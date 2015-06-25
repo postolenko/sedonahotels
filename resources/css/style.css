@@ -100,7 +100,7 @@ a {
 /* HEADER */
 /*-------------------------------------------*/
 
-/*header {
+header {
     background-color: #fff;
     width: 100%;
     height: auto;
@@ -203,9 +203,9 @@ a {
     height: 73px;
     background: url(../img/logo.png) no-repeat top center;
     z-index: 100;
-}*/
+}
 
-header {
+/*header {
     background-color: #fff;
     width: 100%;
     height: auto;
@@ -304,7 +304,7 @@ header {
 }
 
 
-
+*/
 
 /*-------------------------------------------*/
 /* Footer */
