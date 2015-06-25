@@ -26,7 +26,7 @@
     }
 
     .logo {
-        /*position: fixed;*/
+        position: fixed;
         display: block;
         vertical-align: top;
        /* top: 0px;
@@ -42,7 +42,7 @@
        /* position: relative;
         top: 0px;
         left: 30px;*/
-        position: fixed;
+        /*position: fixed;*/
         width: 140px;
     }
 
