@@ -74,7 +74,6 @@
 
     .child-count {
         width: 122px;
-/*        float: right;*/
     }
 
     .child-h {
@@ -172,9 +171,5 @@
         width: 95%;
         padding: 10px 2%;
     }
-
-/*    .child-count {
-        width: 50%;
-    }*/
 
 }
