@@ -5,41 +5,27 @@ var leftCoor
 var mapSectionOffsetTop;
 var searchHtHpgSectCoor;
 var searchBoxMargin;
-// var ua = navigator.userAgent;
 
 	getPaddingSearchBox();
-	// getWrapperWidthSafariWindows();
-	// getNavigationWidth();
 	getReasonBgHeight();
 	getMapSize();
 	showMap();
 
-
-// if (ua.search(/Safari/) > 0) {
-// var f=navigator.userAgent.search(/Safari/);
-// if(f > -1) {
-	// getWrapperWidthSafariWindows();
-// }
-
-
 	$(window).resize(function() {
 
 		getPaddingSearchBox();
-		// getWrapperWidthSafariWindows();
-		// getNavigationWidth();
 		getReasonBgHeight();
 		getMapSize();
 
-		$(".adult-h").css({"width": $(".date-text").outerWidth(true) + "px"});		
-// var ua = navigator.userAgent;
-		// if (ua.search(/Safari/) > 0) {
-		// if(f > -1) {
-	    	// getWrapperWidthSafariWindows();
- 		// }
+		$(".adult-h").css({"width": $(".date-text").outerWidth(true) + "px"});
 
 	});
 
+	$(document).scroll(function() {
 
+			showMap();
+		
+	});
 		
 
 
@@ -251,27 +237,6 @@ var searchBoxMargin;
 		});
 	});
 
-
-
-	// var mapBlock = document.getElementsByClassName("search-ht-hpg-sect")[0];
-	
-	// google.maps.event.addDomListener(window, "load", initialize);
-
-	// searchHtHpgSectCoor = $(".search-ht-hpg-sect").offset().top + $(".search-ht-hpg-sect").outerHeight();
-	// mapSectionOffsetTop = $(".map-section").offset().top + $(window).height();
-
-	$(document).scroll(function() {
-
-		// console.log(( $(".map-section").offset().top + $(window).height() ) +"  "+ ($(".search-ht-hpg-sect").offset().top + $(".search-ht-hpg-sect").outerHeight())+"  "+ ( $(document).scrollTop() + $(window).height() ) +"  "+($(window).scrollTop() + $(window).height()) );
-		
-			// mapSectionOffsetTop = $(".map-section").offset().top + $(window).height();
-		// if ( mapSectionOffsetTop >=  searchHtHpgSectCoor ) {
-
-			showMap();
-
-		// }
-		
-	});
 
 	
 	function showMap() {
