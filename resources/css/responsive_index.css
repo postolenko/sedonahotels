@@ -1,10 +1,5 @@
 @media only screen and (max-width: 768px) {
 
- /*   .row {
-        padding-left: 1%; 
-        padding-right: 1%; 
-    }*/
-
     header {
         height: 50px;
         overflow: hidden;
@@ -19,34 +14,19 @@
     }
 
     .navigation li {
-       /* display: inline-block;
-        vertical-align: middle;*/
         width: 100%;
         padding: 0;
     }
 
     .logo {
       position: fixed;
-      /*    display: block;
-        vertical-align: top;*/
-       /* top: 0px;
-        left: 30px;*/
-          /*position: absolute;*/
             top: 0px;
             left: 0px;
-        /*height: 70px;        */
         z-index: 8;
          width: 140px;
     }
 
     .logo a {
-        /*position: fixed;
-        top: 0; left: 10px;*/
-       /* position: relative;
-        top: 0px;
-        left: 30px;*/
-        /*position: fixed;*/
-        /*top: 0; left: 0;*/
         position: absolute;
         top: 0; left: 20px;
         width: 140px;
@@ -56,7 +36,6 @@
         display: block;
         vertical-align: middle;
         text-align: left;
-        /*min-width: 100%;*/
         padding: 7px 0px 7px 15px;
     }
 
