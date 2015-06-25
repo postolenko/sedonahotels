@@ -33,9 +33,10 @@
         left: 30px;*/
           /*position: absolute;*/
             top: 0px;
-            left: 10px;
+            left: 0px;
         /*height: 70px;        */
         z-index: 8;
+         width: 140px;
     }
 
     .logo a {
@@ -46,7 +47,7 @@
         left: 30px;*/
         /*position: fixed;*/
         /*top: 0; left: 0;*/
-        width: 140px;
+        /*width: 140px;*/
     }
 
     .nav-link {
