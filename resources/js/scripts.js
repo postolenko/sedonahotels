@@ -49,19 +49,6 @@ var searchBoxMargin;
 
 						var index = $( ".icon-plus" ).index( this );
 
-						getCountCustomers(1);
-		
-					});
-
-					$(".icon-minus").click(function(){
-
-						var index = $( ".icon-minus" ).index( this );
-
-						getCountCustomers(-1);
-		
-					});
-
-					function getCountCustomers(module) {
 						var countCustomers = parseFloat($(".count-inpt:eq("+index+")").val());
 
 						if( countCustomers <= 0 || !$.isNumeric(countCustomers) ) {
@@ -70,10 +57,43 @@ var searchBoxMargin;
 
 						} else {
 
-							$(".count-inpt:eq("+index+")").val(countCustomers + module);
+							$(".count-inpt:eq("+index+")").val(++countCustomers);
 
 						}
-					}
+		
+					});
+
+					$(".icon-minus").click(function(){
+
+						var index = $( ".icon-minus" ).index( this );
+
+						var countCustomers = parseFloat($(".count-inpt:eq("+index+")").val());
+
+						if( countCustomers <= 0 || !$.isNumeric(countCustomers) ) {
+
+							countCustomers = 0;
+
+						} else {
+
+							$(".count-inpt:eq("+index+")").val(--countCustomers);
+
+						}
+		
+					});
+
+					// function getCountCustomers(module) {
+					// 	var countCustomers = parseFloat($(".count-inpt:eq("+index+")").val());
+
+					// 	if( countCustomers <= 0 || !$.isNumeric(countCustomers) ) {
+
+					// 		countCustomers = 0;
+
+					// 	} else {
+
+					// 		$(".count-inpt:eq("+index+")").val(countCustomers + module);
+
+					// 	}
+					// }
 
 				});
 
@@ -105,6 +125,49 @@ var searchBoxMargin;
 	});
 
 
+	$(function() {
+
+		$( "#slider-range" ).slider({
+			range: true,
+			min: 0,
+			max: 4100,
+			values: [ 0, 3100 ],
+			slide: function( event, ui ) {
+
+				$( "#amount1" ).val("от " + $( "#slider-range" ).slider( "values", 0 ) );
+				$( "#amount2" ).val("до " + $( "#slider-range" ).slider( "values", 1 ) );		
+
+			}
+
+		});
+
+		$( "#amount1" ).val("от " + $( "#slider-range" ).slider( "values", 0 ) );
+		$( "#amount2" ).val("до " + $( "#slider-range" ).slider( "values", 1 ) );
+
+	});
+
+
+	$(function() {
+
+		$( ".menu-btn" ).click(function() {
+
+			var heightMenu = ( $(".nav-link").length) * $(".navigation li").outerHeight(true) + $(".logo a").outerHeight(true);
+
+			if( $("header").height() < heightMenu ) {
+
+				$("header").animate({"height": heightMenu + "px"},500);
+
+			} else {
+
+				$("header").animate({"height": 50 + "px"},500);
+
+			}
+
+		});
+
+	});
+
+
 	function getReasonBgHeight() {
 
 		$( ".reason-content" ).each(function( index ) {
@@ -115,20 +178,14 @@ var searchBoxMargin;
 
 			if (index % 2 == 0) {
 
-				$(".reason-content:eq("+index+")").css({
-														// "margin-left": leftCoor + "px",
-														"float": "left"
-														});
+				$(".reason-content:eq("+index+")").css({"float": "left"});
 
 				$(".reason-bg:eq("+index+")").css({"right": 0});
 				
 
 			} else {
 
-				$(".reason-content:eq("+index+")").css({
-							
-														"float": "right"
-														});
+				$(".reason-content:eq("+index+")").css({"float": "right"});
 
 		
 				$(".reason-bg:eq("+index+")").css({"left": 0});
@@ -170,27 +227,6 @@ var searchBoxMargin;
 	}
 
 
-	$(function() {
-
-		$( ".menu-btn" ).click(function() {
-
-			var heightMenu = ( $(".nav-link").length) * $(".navigation li").outerHeight(true) + $(".logo a").outerHeight(true);
-
-			if( $("header").height() < heightMenu ) {
-
-				$("header").animate({"height": heightMenu + "px"},500);
-
-			} else {
-
-				$("header").animate({"height": 50 + "px"},500);
-
-			}
-
-		});
-
-	});
-
-
 	
 	function showMap() {
 
@@ -226,28 +262,15 @@ var searchBoxMargin;
 
 	}
 
+	function getMapSize() {
 
+		$("#map-canvas").css({"width": ($(window).width() + ( $(window).width()/100 )*20 ) + "px",
+							  "margin-left": -1 * $(window).width()/100*20 + "px"});
 
-	$(function() {
+		$("#map-canvas").height($(window).height());
 
-		$( "#slider-range" ).slider({
-			range: true,
-			min: 0,
-			max: 4100,
-			values: [ 0, 3100 ],
-			slide: function( event, ui ) {
+	}
 
-				$( "#amount1" ).val("от " + $( "#slider-range" ).slider( "values", 0 ) );
-				$( "#amount2" ).val("до " + $( "#slider-range" ).slider( "values", 1 ) );		
-
-			}
-
-		});
-
-		$( "#amount1" ).val("от " + $( "#slider-range" ).slider( "values", 0 ) );
-		$( "#amount2" ).val("до " + $( "#slider-range" ).slider( "values", 1 ) );
-
-	});
 	
 
 
@@ -270,14 +293,5 @@ var searchBoxMargin;
 	}
 
 
-
-	function getMapSize() {
-
-		$("#map-canvas").css({"width": ($(window).width() + ( $(window).width()/100 )*20 ) + "px",
-							  "margin-left": -1 * $(window).width()/100*20 + "px"});
-
-		$("#map-canvas").height($(window).height());
-
-	}
 
 });
