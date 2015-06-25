@@ -189,13 +189,13 @@ header {
 
 .logo {
     background-color: none;
-    position: fixed;
-     z-index: 100;
+    position: relative;
+    /*z-index: 100;*/
 }
 
 .logo a {
     /*position: fixed;*/
-    position: relative;
+    position: absolute;
     top: -13px;
     left: 0;
     display: block;
