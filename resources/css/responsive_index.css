@@ -42,6 +42,7 @@
        /* position: relative;
         top: 0px;
         left: 30px;*/
+        position: fixed;
         width: 140px;
     }
 
