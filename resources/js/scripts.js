@@ -150,8 +150,6 @@ var searchBoxMargin;
 
 			}
 
-
-			// $(".reason-content").css({"width": percentReasonContnet * onePercentOfRow + "px"});
 			// $(".reason-content").css({"width": percentReasonContnet + "%"});
 
 			if( leftCoor <= 0 ) {
@@ -161,19 +159,10 @@ var searchBoxMargin;
 			}
 
 			$(".reason-bg:eq("+ index +")").css({"width": percentReasonBg * onePercentOfRow + leftCoor + "px"});
-			
-			// $(".reason-bg:eq("+ index +")").css({"width": $(".row").width() - $(".reason-content").outerWidth(true) + leftCoor + "px"});
-
-
-			// $(".reason-bg:eq("+ index +")").css({"width": ( $(window).width() - $(".reason-content").outerWidth(true) ) - leftCoor + "px"});
-
-			// var reasonContent =  document.getElementsByClassName("reason-content")[index];
 
 			var reasonContentHeight = $(".reason-content:eq("+ index +")").height();
 
 			$(".reason-bg:eq("+ index +")").outerHeight( reasonContentHeight );
-
-			// $(".reason-bg:eq("+ index +")").css({"width": $(".row").width() - $(".reason-content").outerWidth(true) + leftCoor + "px"});
 
 
 		});
@@ -267,17 +256,14 @@ var searchBoxMargin;
 		if( $(window).width() <= 768 ) {
 
 			searchBoxMargin = 50;
-			$("header").height(50);
-			// searchBoxMargin = $("header").outerHeight(true);
+			// $("header").height(50);
 
 		} else {
-			$("header").height($("header .navigation").outerHeight(true));
-			// searchBoxMargin = $("header").height();
+			// $("header").height($("header .navigation").outerHeight(true));
+
 			searchBoxMargin = $("header .navigation").outerHeight();
 
 		}
-
-		// пересмотреть sedona hotels
 
 		$('body').css({"padding-top": searchBoxMargin + "px"});
 
