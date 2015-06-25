@@ -26,20 +26,20 @@
     }
 
     .logo {
-        /*position: fixed;*/
+        position: fixed;
         display: block;
         vertical-align: top;
        /* top: 0px;
         left: 30px;*/
         height: 70px;        
         z-index: 8;
-        position: absolute;
+        /*position: absolute;*/
     }
 
     .logo a {
         /*position: fixed;
         top: 0; left: 10px;*/
-        position: absolute;
+        position: relative;
         top: 0px;
         left: 30px;
         width: 140px;
