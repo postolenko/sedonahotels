@@ -3,11 +3,6 @@
     /* yep */ 
 }
 
-/*button::-moz-focus-inner { 
-    border: 0;
-    padding: 0;
-}*/
-
 /*-------------------------------------------*/
 /* BASIC SETUP */
 /*-------------------------------------------*/
@@ -28,21 +23,19 @@ html {
 
 }
 
+html,
+body {
+    height: 100%;
+    min-width: 100%;
+    background-color: #ffffff;
+}
+
 body {
     overflow-x: hidden;
 }
 
 .content {
     position: relative;
-}
-
-
-
-html,
-body {
-    height: 100%;
-    min-width: 100%;
-    background-color: #ffffff;
 }
 
 .wrapper {
@@ -54,15 +47,14 @@ body {
 .content {
     display:table-row; 
     height:100%;
-    /*position: relative;*/
 }
 
 .clearfix:after {
-   content: "."; 
-   display: block; 
-   height: 0; 
-   clear: both; 
-   visibility: hidden;
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
 }
 
 .clearfix {display: inline-block;}
@@ -194,7 +186,6 @@ header {
     top: -13px;
     left: 0;
     width: 100%;
-    /*width: 140px;*/
     height: 73px;
     background: url(../img/logo.png) no-repeat top center;
     z-index: 1000;
