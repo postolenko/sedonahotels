@@ -259,7 +259,7 @@ var searchBoxMargin;
 			// $("header").height(50);
 
 		} else {
-			// $("header").height($("header .navigation").outerHeight(true));
+			$("header").height($("header .navigation").outerHeight(true));
 
 			searchBoxMargin = $("header .navigation").outerHeight();
 
