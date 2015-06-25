@@ -39,7 +39,7 @@
          width: 140px;
     }
 
-    .logo .nav-link {
+    .logo a {
         /*position: fixed;
         top: 0; left: 10px;*/
        /* position: relative;
