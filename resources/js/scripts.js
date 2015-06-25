@@ -48,38 +48,20 @@ var searchBoxMargin;
 					$(".icon-plus").click(function(){
 
 						var index = $( ".icon-plus" ).index( this );
-						getCountCust(1);
-						// var countCustomers = parseFloat($(".count-inpt:eq("+index+")").val());
 
-						// if( countCustomers <= 0 || !$.isNumeric(countCustomers) ) {
-
-						// 	countCustomers = 0;
-
-						// }
-
-						// $(".count-inpt:eq("+index+")").val(++countCustomers);
-
+						getCountCustomers(1);
+		
 					});
 
 					$(".icon-minus").click(function(){
 
 						var index = $( ".icon-minus" ).index( this );
-						getCountCust(-1);
-						// var countCustomers = parseFloat($(".count-inpt:eq("+index+")").val());
 
-						// if( countCustomers <= 0 || !$.isNumeric(countCustomers) ) {
-
-						// 	countCustomers = 0;
-
-						// } else {
-
-						// 	$(".count-inpt:eq("+index+")").val(--countCustomers);
-
-						// }
-
+						getCountCustomers(-1);
+		
 					});
 
-					function getCountCust(module) {
+					function getCountCustomers(module) {
 						var countCustomers = parseFloat($(".count-inpt:eq("+index+")").val());
 
 						if( countCustomers <= 0 || !$.isNumeric(countCustomers) ) {
@@ -169,7 +151,7 @@ var searchBoxMargin;
 			}
 
 
-			$(".reason-content").css({"width": percentReasonContnet * onePercentOfRow + "px"});
+			// $(".reason-content").css({"width": percentReasonContnet * onePercentOfRow + "px"});
 			$(".reason-content").css({"width": percentReasonContnet + "%"});
 
 			if( leftCoor <= 0 ) {
@@ -180,12 +162,12 @@ var searchBoxMargin;
 
 			$(".reason-bg:eq("+ index +")").css({"width": percentReasonBg * onePercentOfRow + leftCoor + "px"});
 			
-			$(".reason-bg:eq("+ index +")").css({"width": $(".row").width() - $(".reason-content").outerWidth(true) + leftCoor + "px"});
+			// $(".reason-bg:eq("+ index +")").css({"width": $(".row").width() - $(".reason-content").outerWidth(true) + leftCoor + "px"});
 
 
-			$(".reason-bg:eq("+ index +")").css({"width": ( $(window).width() - $(".reason-content").outerWidth(true) ) - leftCoor + "px"});
+			// $(".reason-bg:eq("+ index +")").css({"width": ( $(window).width() - $(".reason-content").outerWidth(true) ) - leftCoor + "px"});
 
-			var reasonContent =  document.getElementsByClassName("reason-content")[index];
+			// var reasonContent =  document.getElementsByClassName("reason-content")[index];
 
 			// var reasonContentHeight = $(".reason-content:eq("+ index +")").height();
 
