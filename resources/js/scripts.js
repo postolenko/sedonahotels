@@ -57,7 +57,7 @@ var searchBoxMargin;
 
 						}
 
-						$(".count-inpt:eq("+index+")").val(countCustomers + 1);
+						$(".count-inpt:eq("+index+")").val(++countCustomers);
 
 					});
 
@@ -74,7 +74,7 @@ var searchBoxMargin;
 
 						} else {
 
-							$(".count-inpt:eq("+index+")").val(countCustomers - 1);
+							$(".count-inpt:eq("+index+")").val(--countCustomers);
 
 						}
 
