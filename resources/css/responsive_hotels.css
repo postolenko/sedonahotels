@@ -1,8 +1,13 @@
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 768px) {
+
 
     .input-chek-box {
         float: center;
         width: 100%;
+    }
+
+    .search-inf-box {  
+        padding-left: 10px;
     }
 
     .search-cost {
