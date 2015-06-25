@@ -48,37 +48,50 @@ var searchBoxMargin;
 					$(".icon-plus").click(function(){
 
 						var index = $( ".icon-plus" ).index( this );
+						getCountCust(1);
+						// var countCustomers = parseFloat($(".count-inpt:eq("+index+")").val());
 
-						var countCustomers = parseFloat($(".count-inpt:eq("+index+")").val());
+						// if( countCustomers <= 0 || !$.isNumeric(countCustomers) ) {
 
-						if( countCustomers <= 0 || !$.isNumeric(countCustomers) ) {
+						// 	countCustomers = 0;
 
-							countCustomers = 0;
+						// }
 
-						}
-
-						$(".count-inpt:eq("+index+")").val(++countCustomers);
+						// $(".count-inpt:eq("+index+")").val(++countCustomers);
 
 					});
 
 					$(".icon-minus").click(function(){
 
 						var index = $( ".icon-minus" ).index( this );
+						getCountCust(-1);
+						// var countCustomers = parseFloat($(".count-inpt:eq("+index+")").val());
 
+						// if( countCustomers <= 0 || !$.isNumeric(countCustomers) ) {
+
+						// 	countCustomers = 0;
+
+						// } else {
+
+						// 	$(".count-inpt:eq("+index+")").val(--countCustomers);
+
+						// }
+
+					});
+
+					function getCountCust(module) {
 						var countCustomers = parseFloat($(".count-inpt:eq("+index+")").val());
 
 						if( countCustomers <= 0 || !$.isNumeric(countCustomers) ) {
 
-							// return 0;
 							countCustomers = 0;
 
 						} else {
 
-							$(".count-inpt:eq("+index+")").val(--countCustomers);
+							$(".count-inpt:eq("+index+")").val(countCustomers + module);
 
 						}
-
-					});
+					}
 
 				});
 
