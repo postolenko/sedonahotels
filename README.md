@@ -1,1 +1,1 @@
-# http://postolenko.github.io/sedona
+# http://postolenko.github.io/sedonahotels
