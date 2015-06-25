@@ -1,0 +1,189 @@
+@media only screen and (max-width: 768px) {
+
+ /*   .row {
+        padding-left: 1%; 
+        padding-right: 1%; 
+    }*/
+
+    header {
+        height: 50px;
+        overflow: hidden;
+    }
+
+    .navigation {
+        padding-top: 80px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .navigation li {
+        display: block;
+        vertical-align: middle;
+        width: 100%;
+        padding: 0;
+    }
+
+    .logo {
+        position: fixed;
+        display: block;
+        vertical-align: top;
+        top: 0px;
+        left: 30px;
+        height: 70px;        
+        z-index: 8;
+    }
+
+    .logo a {
+        top: 0;
+        width: 140px;
+    }
+
+    .nav-link {
+        display: block;
+        vertical-align: middle;
+        text-align: left;
+        min-width: 100%;
+        padding: 7px 0px 7px 15px;
+    }
+
+    .reason-content {
+        padding: 15px;
+    }
+
+    .blockquote-reason {
+        padding: 13px 15px;
+    }
+
+    .search-ht-form {
+        width: 65%;
+        padding: 10px 2%;
+    }
+
+    .row-form {
+        margin: 0 auto 10px auto;
+    }
+
+    .close-search-form {
+        top: 2px;
+    }
+
+    .date-text {
+        width: 100%;
+    }
+
+    .date-inpt {
+        width: 100%;
+    }
+
+    .adults-count {
+        width: 50%;
+    }
+
+    .child-count {
+        width: 122px;
+/*        float: right;*/
+    }
+
+    .child-h {
+        width: 100%;       
+    }
+
+    .found-ht-btn {
+        margin-top: 20px;
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 680px) {
+
+    .wlc {
+        font-size: 47px;
+    }
+
+    .t-gorg {
+        font-size: 29px;
+    }
+    .sedona-promo-h {
+        font-size: 76px;
+    }
+
+    .reason-h {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .reason-description {
+        margin-top: 15px;
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .reason-content {
+        width: 47%;
+    }
+
+    .blockquote-reason {
+        width: 100%;
+    }
+
+    .sch-ht-h {
+        font-size: 24px;
+        line-height: 19px;
+    }
+
+    .sch-ht-btn {
+        padding: 20px 40px;
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    footer {
+        padding: 7px 0;
+    }
+
+    .visit-s,
+    .social-icons,
+    .logo-footer {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 480px) {
+
+    .promo-block {
+        padding: 30% 0;
+    }
+
+    .sch-ht-btn {
+        padding: 15px 30px;
+    }
+
+    .sedona-promo-h {
+        font-size: 60px;
+    }
+
+    .reason-content {
+        padding: 4% 2%;
+    }
+
+    .search-ht-form {
+        width: 95%;
+        padding: 10px 2%;
+    }
+
+/*    .child-count {
+        width: 50%;
+    }*/
+
+}

@@ -1,0 +1,588 @@
+.information-page {
+    /*position: relative;*/
+    /*width: 100%;*/
+   /* display: inline-block;
+    vertical-align: top;*/
+
+}
+
+
+
+/*-------------------------------------------*/
+/* Promo block */
+/*-------------------------------------------*/
+
+
+.promo-block {
+    text-align: center;
+    background-color: #808080;
+    /*position: fixed;*/
+    /*position: absolute;*/
+    top:0; left:0;
+    padding: 105px 0;
+    z-index: 4;
+    /*min-width: 100%;*/
+}
+
+.promo-content {
+    margin: 0 auto;
+    z-index: 5;
+}
+
+/*.promo-block:after{
+    content: "";
+    background-image: url("../img/promo_block_brd_btm.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center bottom;
+    min-width: 100%;
+    display: block;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}*/
+
+
+.wlc {
+    font-family: Aharoni Bold;
+    font-size: 67px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+.t-gorg {
+    font-family: Logo Menuescript;
+    font-style: italic;
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: bold;
+    margin-top: 30px;
+    color: #ffffff;
+ }
+
+.t-gorg:before,
+.t-gorg:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    border-top: 1px solid #ffffff;
+    width: 27px;
+}
+
+.t-gorg:before {
+    margin-right: 16px;
+}
+
+.t-gorg:after {
+    margin-left: 5px;
+}
+
+
+.sedona-promo-h {
+    font-family: Aharoni Bold;
+    font-size: 116px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-top: 45px;
+    color: #ffffff;
+}
+
+/*-------------------------------------------*/
+/* Five Reasons */
+/*-------------------------------------------*/
+
+.reasons-box {
+
+/*    margin-top: 450px;*/
+
+     font-size: 0;
+     line-height: 0;
+     background-color: #ffffff;
+     padding-top: 55px;
+     z-index: 4;
+     -webkit-box-shadow: 0px -10px 6px 0px rgba(0, 0, 0, 0.37);
+     -moz-box-shadow:    0px -10px 6px 0px rgba(0, 0, 0, 0.37);
+     box-shadow:         0px -10px 6px 0px rgba(0, 0, 0, 0.37);
+}
+
+/*  five-reasons-head-box  */
+
+.reasons-head-box {
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 55px;
+}
+
+.reasons-box-h {    
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.reasons-box-p {
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: normal;
+}
+
+/* Reason */
+
+.reason-promo-block {
+    position: relative;
+    background-color: #81b3d2;
+}
+
+.reason-content {
+    /*position: relative;*/
+    width: 33%;
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 55px;
+    
+}
+
+.reason-h {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.reason-number {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.reason-number:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 1px;
+    width: 10px;
+    background-color: #c1d8e8;
+    margin-right: 6px;
+}
+
+.reason-number:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 1px;
+    width: 10px;
+    background-color: #c1d8e8;
+    margin-left: 6px;
+}
+
+.reason-description {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.reason-bg {
+    width: 66%;
+    position: absolute; 
+    top: 0;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #dfdfdf;
+}
+
+.city-life {
+    background-image: url("../img/reason1_bg.jpg");
+}
+
+.most-d {
+    background-image: url("../img/most_d.jpg");
+}
+
+.reason-blockquotes-box {
+    padding: 30px 0 55px 0;
+}
+
+.blockquote-reason {
+    display: inline-block;
+    vertical-align: top;
+    width: 33.33%;
+    padding: 25px 55px;
+    text-align: center;
+}
+
+.icon-home,
+.icon-burger,
+.icon-souvenir {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    background-image: url(../../resources/img/s.png);
+    background-repeat: no-repeat;    
+}
+
+.icon-home {
+    background-position: 0px -288px;
+}
+
+.icon-burger{
+    background-position: 3px -418px;
+}
+
+.icon-souvenir {
+    background-position: 0px -550px;
+}
+
+.blockquote-reason-h {
+    margin: 20px auto 0 auto;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.blockquote-reason .reason-number {
+    color: #333333;
+}
+
+.blockquote-reason .reason-number:before,
+.blockquote-reason .reason-number:after {
+    background-color: #979797;
+}
+
+.blockquote-reason-text {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+
+/*-------------------------------------------*/
+/* Form-Search  "Search Hotels in Sedona"  */
+/*-------------------------------------------*/
+
+.search-ht-hpg-sect {
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    background-color: #ffffff;
+    padding-bottom: 25px;
+    z-index: 4;
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.37);
+    -moz-box-shadow:    0px 5px 10px 0px rgba(0, 0, 0, 0.37);
+    box-shadow:         0px 5px 10px 0px rgba(0, 0, 0, 0.37);
+}
+
+.sch-ht-h {
+    padding-top: 60px;
+    font-size: 30px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.sch-ht-p {
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.sch-ht-btn {
+    display: inline-block;
+    margin-top: 43px;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: uppercase;    
+    color: #ffffff;
+    padding: 30px 140px;
+    background-color: #766357; 
+    cursor: pointer;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: background-color;
+    -moz-transition-duration: 0.5s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: background-color;
+    -ms-transition-duration: 0.5s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: background-color;
+    -o-transition-duration: 0.5s;
+    -o-transition-timing-function: ease;
+
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.sch-ht-btn:link,
+.sch-ht-btn:visited {
+    background-color: #766357; 
+}
+
+.sch-ht-btn:hover {
+    background-color: #604e43;
+}
+
+.sch-ht-btn:active {
+    background-color: #503e33;
+    color: #857871;
+}
+
+/* Search Form */
+
+.form {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.9);
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC40Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC40Ii8+CiAgPC9yYWRpYWxHcmFkaWVudD4KICA8cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0.4)));
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%);
+    background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%);
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%);
+    background: radial-gradient(ellipse at center,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#66000000',GradientType=1 );
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.search-ht-form {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    background-color: #ffffff;
+    padding: 55px 2%;
+    font-size: 0px;
+    line-height: 0px;
+    font-weight: bold;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: left;
+    z-index: 11;
+}
+
+.close-search-form {
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+
+.row-form {
+    margin: 0 auto 30px auto;
+}
+
+.date-text,
+.date-inpt {
+    font-size: 14px;
+    line-height: 26px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.date-text {
+    text-align: left;
+    width: 23%;
+}
+
+.date-inpt {
+    width: 77%;
+    position: relative;
+    background-color: #f2f2f2;
+    border: 2px solid transparent;
+}
+
+.date-inpt input {
+    width: 100%;
+    padding: 7px 33px 7px 13px;
+    background-color: #f2f2f2;
+    border: 2px solid transparent;
+    background: none;
+    float: left;
+}
+
+
+.date-inpt:link,
+.date-inpt:visited {
+    background-color: #f2f2f2;
+    border: 2px solid transparent;
+}
+
+.date-inpt:hover {
+    background-color: #ebebeb;
+    border: 2px solid transparent;
+}
+
+.date-inpt:active {
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+}
+
+.icon-calendar {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #c2c2c2;
+    cursor: pointer;
+}
+
+.icon-calendar:link,
+.icon-calendar:visited { 
+    color: #c2c2c2;
+}
+
+.icon-calendar:hover {
+    color: #000000;
+}
+
+.icon-calendar:active {
+    color: #81b3d2;
+}
+
+.adults-count {
+    float:left;
+}
+
+.child-count {
+    float: right;
+}
+
+.adult-h,
+.child-h {
+    display: inline-block; 
+    vertical-align: middle; 
+    font-size: 14px; 
+    line-height: 26px;
+}
+
+.child-h {
+    padding-right: 25px;
+}
+
+.adult-inpt,
+.child-inpt {
+    display: inline-block; 
+    vertical-align: middle; 
+    width: auto; 
+    background-color: #f2f2f2;    
+    font-size: 14px; 
+    line-height: 26px;
+}
+
+.count-inpt {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    text-align: center;
+    padding: 11px 12px 11px 10px;
+}
+
+.icon-count {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 13px 0 13px;
+}
+
+.icon-plus,
+.icon-minus {
+    cursor: pointer;
+    color: #a9a9a9;
+}
+
+.icon-plus:link,
+.icon-plus:visited,
+.icon-minus:link,
+.icon-minus:visited {
+    color: #a9a9a9;
+}
+
+.icon-plus:hover,
+.icon-minus:hover {
+    color: #000000;
+}
+
+.icon-plus:active,
+.icon-minus:active {
+    color: #81b3d2;
+}
+
+
+.count-inpt {
+    border: none;
+    background-color: #f2f2f2;
+}
+
+.found-ht-btn {
+    display: block;
+    width: 100%;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 50px;
+    padding: 17px 0;
+    border: none;
+    background-color: #81b3d2;
+    color: #ffffff;
+}
+
+.found-ht-btn:link,
+.found-ht-btn:visited {
+    background-color: #81b3d2;
+    color: #ffffff;
+}
+
+.found-ht-btn:hover {
+    background-color: #669ec0;
+    color: #ffffff;
+}
+
+.found-ht-btn:active {
+    background-color: #5496bd;
+    color: #88b6d1;
+}
+
+/*-------------------------------------------*/
+/* Map Section */
+/*-------------------------------------------*/
+
+.map-section {
+    position: fixed;
+    bottom: 0; 
+    left: 0;
+    /*padding: 225px 0;*/
+    z-index: 3;
+    background-color: #ffffff;
+}
+
+.map-box {
+    /*height: 450px;*/
+}

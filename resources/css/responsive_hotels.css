@@ -1,0 +1,79 @@
+@media only screen and (max-width: 640px) {
+
+    .input-chek-box {
+        float: center;
+        width: 100%;
+    }
+
+    .search-cost {
+        width: 100%;
+    }
+
+    .search-cost-box {
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+
+    .found {
+        width: 100%;
+    }
+
+    .sorting {
+        width: 85%;
+        padding-left: 0px;
+    }
+
+    .sorting-type {
+        margin-right: 20px;
+    }
+
+    .switch {
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .img-hotel {
+        width: 30%;
+        height: auto;
+    }
+
+    .hotel-description {
+        width: 68%;
+
+    }
+
+    .hotel-h-link a {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .rating-hotel {
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 10px; 
+        width: 100%;
+    }
+
+    .rating-hotel-count {
+        float: left;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .stars-hotels {
+        float: right;
+    }
+
+}
+
+
+@media only screen and (max-width: 480px) {
+
+    .sorting-head {
+        width: 20%;
+    }
+
+}

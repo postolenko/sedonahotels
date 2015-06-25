@@ -1,0 +1,372 @@
+$(document).ready(function() {
+
+var onePercentOfRow
+var leftCoor
+var mapSectionOffsetTop;
+var searchHtHpgSectCoor;
+var searchBoxMargin;
+// var ua = navigator.userAgent;
+
+	getPaddingSearchBox();
+	// getWrapperWidthSafariWindows();
+	// getNavigationWidth();
+	getReasonBgHeight();
+	getMapSize();
+	showMap();
+
+
+// if (ua.search(/Safari/) > 0) {
+// var f=navigator.userAgent.search(/Safari/);
+// if(f > -1) {
+	// getWrapperWidthSafariWindows();
+// }
+
+
+	$(window).resize(function() {
+
+		getPaddingSearchBox();
+		// getWrapperWidthSafariWindows();
+		// getNavigationWidth();
+		getReasonBgHeight();
+		getMapSize();
+
+		$(".adult-h").css({"width": $(".date-text").outerWidth(true) + "px"});		
+// var ua = navigator.userAgent;
+		// if (ua.search(/Safari/) > 0) {
+		// if(f > -1) {
+	    	// getWrapperWidthSafariWindows();
+ 		// }
+
+	});
+
+
+		
+
+
+// 	function getWrapperWidthSafariWindows() {	    
+// var ua = navigator.userAgent;
+// 		if (ua.search(/Safari/) > 0) {
+// 			$(".wrapper").css({"width": $(window).width() + "px"});
+
+// 	    	if($(window).width() < 680) {
+
+// 				$(".navigation li, .blockquote-reason, .visit-s, .social-icons, .logo-footer").css({"width": 100 + "%"});
+
+// 	    	} else {
+	    		
+// 	    		$(".navigation li").css({"width": 19.6 + "%"});
+// 	    		$(".blockquote-reason").css({"width": 32.7 + "%"});
+// 	    		$(".visit-s, .social-icons, .logo-footer").css({"width": 33 + "%"});
+
+// 	    	}	   
+// 	    }
+// 	}
+
+
+	$(function() {
+
+
+		$('.sch-ht-btn').click(function(){ 
+
+			$(".search-ht-hpg-sect").append("<div class='form'></div>");
+
+			$('.form').load('pages/search_form.html', function() {
+	
+				$(function() {
+
+					$(".search-ht-form ").css({"top": $(window).height()/2 - $(".form form").height()/2 + "px"});
+					$(".adult-h").css({"width": $(".date-text").outerWidth(true) + "px"});
+				});
+
+				// $(function() {
+
+				// 	$( "#datepicker_to, #datepicker_of" ).datepicker();
+
+				// 	$( "#anim" ).change(function() {
+
+				// 		$( "#datepicker_to, #datepicker_of" ).datepicker( "option", "showAnim", $( this ).val() );
+
+				// 	});
+				
+				// });
+
+				$(function() {
+
+					$(".icon-plus").click(function(){
+
+						var index = $( ".icon-plus" ).index( this );
+
+						var countCustomers = parseFloat($(".count-inpt:eq("+index+")").val());
+
+						if( !$.isNumeric(countCustomers) ) {
+
+							countCustomers = 0;
+
+						}
+
+						$(".count-inpt:eq("+index+")").val(countCustomers + 1);
+
+					});
+
+					$(".icon-minus").click(function(){
+
+						var index = $( ".icon-minus" ).index( this );
+
+						var countCustomers = parseFloat($(".count-inpt:eq("+index+")").val());
+
+						if( countCustomers <= 0 || !$.isNumeric(countCustomers) ) {
+
+							return 0;
+
+						} else {
+
+							$(".count-inpt:eq("+index+")").val(countCustomers - 1);
+
+						}
+
+					});
+
+				});
+
+
+				$(function () {
+
+					if( $(window).width() >= 768) {
+
+						$(".adult-h").css({"width": $(".date-text").outerWidth(true) + "px"});
+
+					} else {
+
+						$(".adult-h").css({"width": "100%"});
+	
+					}
+
+				});
+
+				$(".found-ht-btn, .close-search-form").click(function() {
+
+					$(".form").remove();
+
+				});
+
+			});
+
+		}); 
+
+	});
+
+
+	function getReasonBgHeight() {
+
+		$( ".reason-content" ).each(function( index ) {
+
+			onePercentOfRow = $(".row").width() / 100;
+
+			leftCoor = ( $(window).width() - $(".row").width() ) / 2 ;
+
+			if (index % 2 == 0) {
+
+				$(".reason-content:eq("+index+")").css({
+														// "margin-left": leftCoor + "px",
+														"float": "left"
+														});
+
+				$(".reason-bg:eq("+index+")").css({"right": 0});
+				
+
+			} else {
+
+				$(".reason-content:eq("+index+")").css({
+							
+														"float": "right"
+														});
+
+		
+				$(".reason-bg:eq("+index+")").css({"left": 0});
+
+				$(".reason:eq("+index+")").css({"background-color":"#eeeeee"});
+
+			}
+
+
+			// if( $(window).width() <= 680 ){
+
+			// 	// var percentReasonContnet = 47;
+			// 	var percentReasonBg = 52;
+
+			// } else {
+
+			// 	// var percentReasonContnet = 33;
+			// 	var percentReasonBg = 66;
+
+			// }
+
+
+			// $(".reason-content").css({"width": percentReasonContnet * onePercentOfRow + "px"});
+			// $(".reason-content").css({"width": percentReasonContnet + "%"});
+
+			// if( leftCoor <= 0 ) {
+
+			// 	$(".reason-content").css({"margin": 0 + "px"});
+
+			// }
+
+			// $(".reason-bg:eq("+ index +")").css({"width": percentReasonBg * onePercentOfRow + leftCoor + "px"});
+			
+			// $(".reason-bg:eq("+ index +")").css({"width": $(".row").width() - $(".reason-content").outerWidth(true) + leftCoor + "px"});
+
+
+			// $(".reason-bg:eq("+ index +")").css({"width": ( $(window).width() - $(".reason-content").outerWidth(true) ) - leftCoor + "px"});
+
+			// var reasonContent =  document.getElementsByClassName("reason-content")[index];
+
+			var reasonContentHeight = $(".reason-content:eq("+ index +")").height();
+
+			$(".reason-bg:eq("+ index +")").outerHeight( reasonContentHeight );
+
+			$(".reason-bg:eq("+ index +")").css({"width": $(".row").width() - $(".reason-content").outerWidth(true) + leftCoor + "px"});
+
+
+		});
+
+	}
+
+
+	$(function() {
+
+		$( ".menu-btn" ).click(function() {
+
+			var heightMenu = ( $(".nav-link").length) * $(".navigation li").outerHeight(true) + $(".logo a").outerHeight(true);
+
+			if( $("header").height() < heightMenu ) {
+
+				$("header").animate({"height": heightMenu + "px"},500);
+
+			} else {
+
+				$("header").animate({"height": 50 + "px"},500);
+
+			}
+
+		});
+	});
+
+
+
+	// var mapBlock = document.getElementsByClassName("search-ht-hpg-sect")[0];
+	
+	// google.maps.event.addDomListener(window, "load", initialize);
+
+	// searchHtHpgSectCoor = $(".search-ht-hpg-sect").offset().top + $(".search-ht-hpg-sect").outerHeight();
+	// mapSectionOffsetTop = $(".map-section").offset().top + $(window).height();
+
+	$(document).scroll(function() {
+
+		// console.log(( $(".map-section").offset().top + $(window).height() ) +"  "+ ($(".search-ht-hpg-sect").offset().top + $(".search-ht-hpg-sect").outerHeight())+"  "+ ( $(document).scrollTop() + $(window).height() ) +"  "+($(window).scrollTop() + $(window).height()) );
+		
+			// mapSectionOffsetTop = $(".map-section").offset().top + $(window).height();
+		// if ( mapSectionOffsetTop >=  searchHtHpgSectCoor ) {
+
+			showMap();
+
+		// }
+		
+	});
+
+	
+	function showMap() {
+
+		var mapBlock = document.getElementsByClassName("search-ht-hpg-sect")[0];
+
+		mapSectionOffsetTop = $(".map-section").offset().top + $(window).height();
+		searchHtHpgSectCoor = $(".search-ht-hpg-sect").offset().top + $(".search-ht-hpg-sect").outerHeight();
+			// var mapBlockCoor = mapBlock.getBoundingClientRect();
+
+			
+			// console.log($(window).offset.bottom());
+
+			// if ( ( mapBlockCoor.top - $("header").height() ) <= 0 ) {					
+			if ( mapSectionOffsetTop >=  searchHtHpgSectCoor ) {
+
+				if( !$("div").is(".gm-style") ) {
+
+					google.maps.event.addDomListener(window, "load", initialize());
+
+				}
+
+			}
+
+	}
+
+
+	function initialize() {
+
+		var latlng = new google.maps.LatLng(34.8716409,-111.761786,1875);
+
+		var myOptions = {
+			zoom: 17,
+			center: latlng,
+			mapTypeId: google.maps.MapTypeId.LANDSCAPEMAP
+		};
+
+		var map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+
+	}
+
+
+
+	$(function() {
+
+		$( "#slider-range" ).slider({
+			range: true,
+			min: 0,
+			max: 4100,
+			values: [ 0, 3100 ],
+			slide: function( event, ui ) {
+
+				$( "#amount1" ).val("от " + $( "#slider-range" ).slider( "values", 0 ) );
+				$( "#amount2" ).val("до " + $( "#slider-range" ).slider( "values", 1 ) );		
+
+			}
+
+		});
+
+		$( "#amount1" ).val("от " + $( "#slider-range" ).slider( "values", 0 ) );
+		$( "#amount2" ).val("до " + $( "#slider-range" ).slider( "values", 1 ) );
+
+	});
+	
+
+
+	function getPaddingSearchBox() {
+
+		if( $(window).width() < 768 ) {
+
+			searchBoxMargin = 50;
+			// $("header").height(50);
+			// searchBoxMargin = $("header").outerHeight(true);
+
+		} else {
+			$("header").height("auto");
+			searchBoxMargin = $("header").height();
+
+		}
+
+		// пересмотреть sedona hotels
+
+		$('body').css({"padding-top": searchBoxMargin + "px"});
+
+	}
+
+
+
+	function getMapSize() {
+
+		$("#map-canvas").css({"width": ($(window).width() + ( $(window).width()/100 )*20 ) + "px",
+							  "margin-left": -1 * $(window).width()/100*20 + "px"});
+
+		$("#map-canvas").height($(window).height());
+
+	}
+
+});
