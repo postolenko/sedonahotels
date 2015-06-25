@@ -39,7 +39,7 @@
          width: 140px;
     }
 
-    .logo a {
+    .logo .nav-link {
         /*position: fixed;
         top: 0; left: 10px;*/
        /* position: relative;
@@ -47,7 +47,7 @@
         left: 30px;*/
         /*position: fixed;*/
         /*top: 0; left: 0;*/
-        /*width: 140px;*/
+        width: 140px;
     }
 
     .nav-link {
