@@ -140,12 +140,12 @@ var searchBoxMargin;
 
 			if( $(window).width() <= 680 ){
 
-				var percentReasonContnet = 47;
+				// var percentReasonContnet = 47;
 				var percentReasonBg = 52;
 
 			} else {
 
-				var percentReasonContnet = 33;
+				// var percentReasonContnet = 33;
 				var percentReasonBg = 66;
 
 			}
@@ -173,7 +173,7 @@ var searchBoxMargin;
 
 			$(".reason-bg:eq("+ index +")").outerHeight( reasonContentHeight );
 
-			$(".reason-bg:eq("+ index +")").css({"width": $(".row").width() - $(".reason-content").outerWidth(true) + leftCoor + "px"});
+			// $(".reason-bg:eq("+ index +")").css({"width": $(".row").width() - $(".reason-content").outerWidth(true) + leftCoor + "px"});
 
 
 		});
