@@ -343,7 +343,7 @@ var searchBoxMargin;
 		if( $(window).width() < 768 ) {
 
 			searchBoxMargin = 50;
-			// $("header").height(50);
+			$("header").height(50);
 			// searchBoxMargin = $("header").outerHeight(true);
 
 		} else {
