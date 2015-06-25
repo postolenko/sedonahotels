@@ -51,7 +51,7 @@ var searchBoxMargin;
 
 						var countCustomers = parseFloat($(".count-inpt:eq("+index+")").val());
 
-						if( !$.isNumeric(countCustomers) ) {
+						if( countCustomers <= 0 || !$.isNumeric(countCustomers) ) {
 
 							countCustomers = 0;
 
@@ -69,7 +69,8 @@ var searchBoxMargin;
 
 						if( countCustomers <= 0 || !$.isNumeric(countCustomers) ) {
 
-							return 0;
+							// return 0;
+							countCustomers = 0;
 
 						} else {
 
@@ -202,6 +203,7 @@ var searchBoxMargin;
 			}
 
 		});
+
 	});
 
 
