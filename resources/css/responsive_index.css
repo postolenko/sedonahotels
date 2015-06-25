@@ -26,12 +26,15 @@
     }
 
     .logo {
-        position: fixed;
+       /* position: fixed;
         display: block;
-        vertical-align: top;
+        vertical-align: top;*/
        /* top: 0px;
         left: 30px;*/
-        height: 70px;        
+          position: absolute;
+            top: 0px;
+            left: 10px;
+        /*height: 70px;        */
         z-index: 8;
         /*position: absolute;*/
     }
@@ -43,6 +46,7 @@
         top: 0px;
         left: 30px;*/
         /*position: fixed;*/
+        top: 0; left: 0;
         width: 140px;
     }
 
