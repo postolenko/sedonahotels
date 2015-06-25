@@ -340,7 +340,7 @@ var searchBoxMargin;
 
 	function getPaddingSearchBox() {
 
-		if( $(window).width() < 768 ) {
+		if( $(window).width() <= 768 ) {
 
 			searchBoxMargin = 50;
 			$("header").height(50);
@@ -348,7 +348,8 @@ var searchBoxMargin;
 
 		} else {
 			$("header").height($("header .navigation").outerHeight(true));
-			searchBoxMargin = $("header").height();
+			// searchBoxMargin = $("header").height();
+			searchBoxMargin = $("header .navigation").outerHeight(true);
 
 		}
 
