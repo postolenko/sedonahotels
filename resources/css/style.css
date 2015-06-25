@@ -210,6 +210,7 @@ a {
     top: -13px;
     left: 0;
     /*width: 100%;*/
+    width: 140px;
     height: 73px;
     background: url(../img/logo.png) no-repeat top center;
     z-index: 1000;
