@@ -152,7 +152,7 @@ var searchBoxMargin;
 
 
 			// $(".reason-content").css({"width": percentReasonContnet * onePercentOfRow + "px"});
-			$(".reason-content").css({"width": percentReasonContnet + "%"});
+			// $(".reason-content").css({"width": percentReasonContnet + "%"});
 
 			if( leftCoor <= 0 ) {
 
@@ -160,7 +160,7 @@ var searchBoxMargin;
 
 			}
 
-			$(".reason-bg:eq("+ index +")").css({"width": percentReasonBg * onePercentOfRow + leftCoor + "px"});
+			// $(".reason-bg:eq("+ index +")").css({"width": percentReasonBg * onePercentOfRow + leftCoor + "px"});
 			
 			// $(".reason-bg:eq("+ index +")").css({"width": $(".row").width() - $(".reason-content").outerWidth(true) + leftCoor + "px"});
 
@@ -169,11 +169,11 @@ var searchBoxMargin;
 
 			// var reasonContent =  document.getElementsByClassName("reason-content")[index];
 
-			// var reasonContentHeight = $(".reason-content:eq("+ index +")").height();
+			var reasonContentHeight = $(".reason-content:eq("+ index +")").height();
 
-			// $(".reason-bg:eq("+ index +")").outerHeight( reasonContentHeight );
+			$(".reason-bg:eq("+ index +")").outerHeight( reasonContentHeight );
 
-			// $(".reason-bg:eq("+ index +")").css({"width": $(".row").width() - $(".reason-content").outerWidth(true) + leftCoor + "px"});
+			$(".reason-bg:eq("+ index +")").css({"width": $(".row").width() - $(".reason-content").outerWidth(true) + leftCoor + "px"});
 
 
 		});
@@ -209,12 +209,7 @@ var searchBoxMargin;
 
 		mapSectionOffsetTop = $(".map-section").offset().top + $(window).height();
 		searchHtHpgSectCoor = $(".search-ht-hpg-sect").offset().top + $(".search-ht-hpg-sect").outerHeight();
-			// var mapBlockCoor = mapBlock.getBoundingClientRect();
-
-			
-			// console.log($(window).offset.bottom());
-
-			// if ( ( mapBlockCoor.top - $("header").height() ) <= 0 ) {					
+							
 			if ( mapSectionOffsetTop >=  searchHtHpgSectCoor ) {
 
 				if( !$("div").is(".gm-style") ) {
