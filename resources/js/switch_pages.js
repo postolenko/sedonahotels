@@ -6,7 +6,7 @@ $(function() {
 	var indexMenu;
 	var namePage;
 
-	$(".navigation li").click(function() {
+	$(".navigation li a").click(function() {
 
 		indexMenu = $(this).index();
 
