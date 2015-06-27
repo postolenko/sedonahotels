@@ -1,17 +1,23 @@
 // Этот скрипт написан только для того чтоб показать страницу "Гостиницы"
-// Преключение между страницами будет обрабатываться на Back End
+// Преключение между страницами будет обрабатываться с помощью Back End
+
+$(document).ready(function() {
+
+
 
 $(function() {
 
 	var indexMenu;
 	var namePage;
 
-	$(".nav-link").click(function() {
+	$(".navigation li").click(function() {
 
 		indexMenu = $(this).index();
+		console.log(indexMenu);
 
 		namePage = $(".nav-link:eq("+indexMenu+")").text();
-		
+		console.log(namePage);
+
 		if(namePage == "Гостиницы") {		
 
 			$(".information-page").fadeOut(300);
@@ -28,7 +34,7 @@ $(function() {
 		}
 
 		if(namePage == "Информация") {
-
+			console.log(namePage);
 			$(".hotels-page").css({"display":"none"});
 
 			$(".information-page").fadeIn(1000);
@@ -41,5 +47,7 @@ $(function() {
 
 	});
 
+
+});
 
 });
