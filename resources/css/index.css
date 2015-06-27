@@ -177,16 +177,13 @@
     background-size: cover;
     background-position: center;
     background-color: #dfdfdf;
-
-    /*background-attachment: fixed;*/
-     box-shadow: 0 0 20px rgba(0, 0, 0, 0.9) inset;
-      /*box-shadow: 0 3px 3px #575555 inset; */
-
-
+    -webkit-box-shadow: inset 0px 0px 20px rgba(0,0,0,0.69);
+    -moz-box-shadow: inset 0px 0px 20px rgba(0,0,0,0.69);
+    box-shadow: inset 0px 0px 20px rgba(0,0,0,0.69);
 }
 
 .city-life {
-    background-image: url(../img/city_bg.jpg);
+    background-image: url(../img/city_bg_s.jpg);
 }
 
 .most-d {

@@ -13,11 +13,9 @@ $(function() {
 	$(".navigation li").click(function() {
 
 		indexMenu = $(this).index();
-		console.log(indexMenu);
-
+		
 		namePage = $(".nav-link:eq("+indexMenu+")").text();
-		console.log(namePage);
-
+		
 		if(namePage == "Гостиницы") {		
 
 			$(".information-page").fadeOut(300);
@@ -34,7 +32,7 @@ $(function() {
 		}
 
 		if(namePage == "Информация") {
-			console.log(namePage);
+		
 			$(".hotels-page").css({"display":"none"});
 
 			$(".information-page").fadeIn(1000);
@@ -42,6 +40,8 @@ $(function() {
 			$("footer").css({"top":"450px"});
 
 			$(".hotels-page").css({"left":"100%"});
+
+			showMap();
 
 		}
 
