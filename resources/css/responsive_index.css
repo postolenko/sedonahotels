@@ -1,44 +1,5 @@
 @media only screen and (max-width: 768px) {
 
-    header {
-        height: 50px;
-        overflow: hidden;
-    }
-
-    .navigation {
-        padding-top: 80px;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    .navigation li {
-        width: 100%;
-        padding: 0;
-    }
-
-    .logo {
-      position: fixed;
-            top: 0px;
-            left: 0px;
-        z-index: 8;
-         width: 140px;
-    }
-
-    .logo a {
-        position: absolute;
-        top: 0; left: 20px;
-        width: 140px;
-    }
-
-    .nav-link {
-        display: block;
-        vertical-align: middle;
-        text-align: left;
-        padding: 7px 0px 7px 15px;
-    }
-
     .reason-content {
         padding: 15px;
     }
@@ -90,16 +51,9 @@
 
 
 @media only screen and (max-width: 680px) {
-
-    .wlc {
-        font-size: 47px;
-    }
-
-    .t-gorg {
-        font-size: 29px;
-    }
+ 
     .sedona-promo-h {
-        font-size: 76px;
+        font-size: 100px;
     }
 
     .reason-h {
@@ -132,19 +86,6 @@
         line-height: 23px;
     }
 
-    footer {
-        padding: 7px 0;
-    }
-
-    .visit-s,
-    .social-icons,
-    .logo-footer {
-        width: 100%;
-        text-align: center;
-        padding: 0;
-        margin: 10px 0;
-    }
-
 
 }
 
@@ -155,12 +96,24 @@
         padding: 30% 0;
     }
 
+    .wlc {
+        font-size: 45px;
+    }
+
+    .t-gorg {
+        font-size: 24px;
+    }
+
+    .sedona-promo-h {
+        font-size: 85px;
+    }
+
     .sch-ht-btn {
         padding: 15px 30px;
     }
 
     .sedona-promo-h {
-        font-size: 60px;
+        font-size: 70px;
     }
 
     .reason-content {
@@ -172,4 +125,18 @@
         padding: 10px 2%;
     }
 
+}
+
+@media only screen and (max-width: 320px) {
+    .wlc {
+        font-size: 45px;
+    }
+
+    .t-gorg {
+        font-size: 24px;
+    }
+
+    .sedona-promo-h {
+        font-size: 69px;
+    }
 }

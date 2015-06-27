@@ -30,10 +30,6 @@ body {
     background-color: #ffffff;
 }
 
-body {
-    overflow-x: hidden;
-}
-
 .content {
     position: relative;
 }
@@ -106,6 +102,18 @@ header {
     box-shadow:         0px 3px 10px 0px rgba(0, 0, 0, 0.37);
 }
 
+.header-bg {
+    background-color: none;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC43Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC43Ii8+CiAgPC9yYWRpYWxHcmFkaWVudD4KICA8cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.7)), color-stop(100%,rgba(255,255,255,0.7)));
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%);
+    background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%);
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%);
+    background: radial-gradient(ellipse at center,  rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3ffffff', endColorstr='#b3ffffff',GradientType=1 );
+}
+
 .header-height {
     height: auto;
 }
@@ -136,10 +144,6 @@ header {
     color: #b2b2b2;
 }
 
-.navigation {
-    background-color: #fff;
-}
-
 .navigation li  {
     font-size: 14px;
     line-height: 26px;
@@ -168,7 +172,8 @@ header {
 }
 
 .nav-link:hover {
-    color: #81b3d2;
+    /*color: #81b3d2;*/
+    color: #81a5d2;
 }
 
 .nav-link:active {
@@ -190,8 +195,6 @@ header {
     background: url(../img/logo.png) no-repeat top center;
     z-index: 1000;
 }
-
-
 
 
 /*-------------------------------------------*/
@@ -308,7 +311,7 @@ footer {
 .logo-htmlacademy {
     width: 135px;
     height: 35px;
-    background-image: url(../../resources/img/s.png);
+    background-image: url(../../resources/img/sprite.png);
     background-repeat: no-repeat;
     font-size: 14px;
     line-height: 26px;

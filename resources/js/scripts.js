@@ -1,83 +1,109 @@
 $(document).ready(function() {
 
-var onePercentOfRow
-var leftCoor
-var mapSectionOffsetTop;
-var searchHtHpgSectCoor;
-var searchBoxMargin;
 
-	getPaddingSearchBox();
-	getReasonBgHeight();
+var heightMenu; 			// Высота меню
+
+
+var onePercentOfRow; 		// Величина 1% ширины ".row"
+var percentReasonBg;  		// Величина 1% ширины ".reason-bg"
+var reasonContentHeight;	// Высота ".reason-content"
+var leftCoor;          		// Ширина от левого края окна до левого края ".row"
+
+
+var searchHtHpgSectCoor;	// Координата ".search-ht-hpg-sect"
+
+var searchBoxMargin;		
+
+
+var mapSectionOffsetTop;	// Координата положения карты
+var mapBlock;				
+
+
+var index;					
+var countCustomers;			
+
+
+var countScrollForHeader = 0;
+
+
+	getPaddingBody();
+	getBackgroundHeader();
+	getReasonBgHeightAndPosition();
 	getMapSize();
 	showMap();
 
 	$(window).resize(function() {
 
-		getPaddingSearchBox();
-		getReasonBgHeight();
+		getPaddingBody();
+		getReasonBgHeightAndPosition();
 		getMapSize();
 
 		$(".adult-h").css({"width": $(".date-text").outerWidth(true) + "px"});
 
 	});
 
+
+		
 	$(document).scroll(function() {
 
+			getBackgroundHeader();
 			showMap();
-		
+
 	});
 		
 
+// Вывод формы поиска гостиницы на екран при нажатии на кнопку "sch-ht-btn" ( Поиск гостиницы в Седоне )
 	$(function() {
 
 
 		$('.sch-ht-btn').click(function(){ 
-
+			// Добаление блока "form" для вставки формы 
 			$(".search-ht-hpg-sect").append("<div class='form'></div>");
-
+			// Загрузка HTML кода формы по адресу "pages/search_form.html"
 			$('.form').load('pages/search_form.html', function() {
-	
+				// Центральное расположение формы поиска гостиницы на странице "Информация"
 				$(function() {
 
 					$(".search-ht-form ").css({"top": $(window).height()/2 - $(".form form").height()/2 + "px"});
 					$(".adult-h").css({"width": $(".date-text").outerWidth(true) + "px"});
 				});
-
+				// Выбор количества посетителей 
 				$(function() {
 
 					$(".icon-plus").click(function(){
 
-						var index = $( ".icon-plus" ).index( this );
+						index = $( ".icon-plus" ).index( this );
+						// function getCountCustomers(1);
+						countCustomers = parseFloat($(".count-inpt:eq("+index+")").val());
 
-						var countCustomers = parseFloat($(".count-inpt:eq("+index+")").val());
-
-						if( countCustomers <= 0 || !$.isNumeric(countCustomers)) {
-
-							countCustomers = 0;
-
+						if( countCustomers <= 0 || !$.isNumeric(countCustomers) ) {
+					
+							countCustomers = 1;
+						
 						} else {
 
-							$(".count-inpt:eq("+index+")").val(++countCustomers);
+							++countCustomers;
 
 						}
-		
+						$(".count-inpt:eq("+index+")").val(countCustomers);
 					});
 
 					$(".icon-minus").click(function(){
 
-						var index = $( ".icon-minus" ).index( this );
+						index = $( ".icon-minus" ).index( this );
+						// function getCountCustomers(-1);
+						countCustomers = parseFloat($(".count-inpt:eq("+index+")").val());
 
-						var countCustomers = parseFloat($(".count-inpt:eq("+index+")").val());
-
-						if( countCustomers <= 0 || !$.isNumeric(countCustomers)) {
-
+						if( countCustomers <= 0 || !$.isNumeric(countCustomers) ) {
+							
 							countCustomers = 0;
-
+							
 						} else {
 
-							$(".count-inpt:eq("+index+")").val(--countCustomers);
+							--countCustomers;
 
 						}
+						$(".count-inpt:eq("+index+")").val(countCustomers);
 		
 					});
 
@@ -124,6 +150,8 @@ var searchBoxMargin;
 
 	});
 
+// Определение величины в input "#amount1" и "#amount2" при выборе диапазона стоимости гостиниц
+// Ползунок на странице "Гостиницы"
 
 	$(function() {
 
@@ -146,12 +174,12 @@ var searchBoxMargin;
 
 	});
 
-
+//  Показать - скрыть адаптивное меню при клике на иконку "гамбургер"
 	$(function() {
 
 		$( ".menu-btn" ).click(function() {
 
-			var heightMenu = ( $(".nav-link").length) * $(".navigation li").outerHeight(true) + $(".logo a").outerHeight(true);
+			heightMenu = ( $(".nav-link").length) * $(".navigation li").outerHeight(true) + $(".logo a").outerHeight(true);
 
 			if( $("header").height() < heightMenu ) {
 
@@ -167,8 +195,54 @@ var searchBoxMargin;
 
 	});
 
+// Отступ сферху всего документа равный высоте фиксированного меню
+	function getPaddingBody() {
 
-	function getReasonBgHeight() {
+		if( $(window).width() <= 768 ) {
+
+			searchBoxMargin = 50;
+
+		} else {
+
+			$("header").height($("header .navigation").outerHeight(true));
+
+			searchBoxMargin = $("header .navigation").outerHeight();
+
+		}
+
+		$('body').css({"padding-top": searchBoxMargin + "px"});
+
+	}
+
+// Определить фон ".header"  
+	function getBackgroundHeader() {
+		if ( $(window).scrollTop() <= $("header").height() ) {					
+
+			countScrollForHeader = 0;
+
+			if($("header").hasClass("header-bg")) {
+
+				$("header").removeClass("header-bg");
+
+			}
+
+		} else {
+
+			++countScrollForHeader;
+
+			if( countScrollForHeader == 1 ) {
+
+				$("header").addClass("header-bg");
+
+			}	
+
+		}
+	}
+
+
+// Получние высоты и ширины блока с фоновым изображением блока ".reason-promo-block .reason-bg" и
+// "background-color" нечетного блока "reason"
+	function getReasonBgHeightAndPosition() {
 
 		$( ".reason-content" ).each(function( index ) {
 
@@ -198,12 +272,12 @@ var searchBoxMargin;
 			if( $(window).width() <= 680 ){
 
 				// var percentReasonContnet = 47;
-				var percentReasonBg = 52;
+				percentReasonBg = 52;
 
 			} else {
 
 				// var percentReasonContnet = 33;
-				var percentReasonBg = 66;
+				percentReasonBg = 66;
 
 			}
 
@@ -217,7 +291,7 @@ var searchBoxMargin;
 
 			$(".reason-bg:eq("+ index +")").css({"width": percentReasonBg * onePercentOfRow + leftCoor + "px"});
 
-			var reasonContentHeight = $(".reason-content:eq("+ index +")").height();
+			reasonContentHeight = $(".reason-content:eq("+ index +")").height();
 
 			$(".reason-bg:eq("+ index +")").outerHeight( reasonContentHeight );
 
@@ -227,10 +301,13 @@ var searchBoxMargin;
 	}
 
 
+
+// Google Map
 	
+// Загрузить Google карту если секция "map-section" попадает в окно браузера
 	function showMap() {
 
-		var mapBlock = document.getElementsByClassName("search-ht-hpg-sect")[0];
+		mapBlock = document.getElementsByClassName("search-ht-hpg-sect")[0];
 
 		mapSectionOffsetTop = $(".map-section").offset().top + $(window).height();
 		searchHtHpgSectCoor = $(".search-ht-hpg-sect").offset().top + $(".search-ht-hpg-sect").outerHeight();
@@ -247,7 +324,7 @@ var searchBoxMargin;
 
 	}
 
-
+//  Инициализация карты
 	function initialize() {
 
 		var latlng = new google.maps.LatLng(34.8716409,-111.761786,1875);
@@ -262,36 +339,15 @@ var searchBoxMargin;
 
 	}
 
+// Получение ширины и высоты карты при загрузке и ресайзе
 	function getMapSize() {
 
 		$("#map-canvas").css({"width": ($(window).width() + ( $(window).width()/100 )*20 ) + "px",
-							  "margin-left": -1 * $(window).width()/100*20 + "px"});
+							  "margin-left": -$(window).width()/100*20 + "px"});
 
 		$("#map-canvas").height($(window).height());
 
 	}
 
 	
-
-
-	function getPaddingSearchBox() {
-
-		if( $(window).width() <= 768 ) {
-
-			searchBoxMargin = 50;
-			// $("header").height(50);
-
-		} else {
-			$("header").height($("header .navigation").outerHeight(true));
-
-			searchBoxMargin = $("header .navigation").outerHeight();
-
-		}
-
-		$('body').css({"padding-top": searchBoxMargin + "px"});
-
-	}
-
-
-
 });

@@ -11,6 +11,7 @@
 	-o-border-radius: 50%;	
 	border-radius: 50%;
 }
+
 .ui-slider .ui-slider-range { position: absolute; z-index: 1; font-size: .7em; display: block; border: 0; background-position: 0 0; }
 
 .ui-slider-horizontal { height: 2px; margin-top: 30px;  width: 220px;}
@@ -36,6 +37,7 @@ body .ui-tooltip { border-width: 2px; }
 }
 .ui-widget-content::after {
   content: "";
+  background-color: #ffffff; 
   border: 1px solid #fff;
   opacity: 0.5;
   top: 0px;

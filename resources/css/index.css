@@ -1,13 +1,3 @@
-.information-page {
-    /*position: relative;*/
-    /*width: 100%;*/
-   /* display: inline-block;
-    vertical-align: top;*/
-
-}
-
-
-
 /*-------------------------------------------*/
 /* Promo block */
 /*-------------------------------------------*/
@@ -16,12 +6,9 @@
 .promo-block {
     text-align: center;
     background-color: #808080;
-    /*position: fixed;*/
-    /*position: absolute;*/
     top:0; left:0;
-    padding: 105px 0;
+    padding: 110px 0;
     z-index: 4;
-    /*min-width: 100%;*/
 }
 
 .promo-content {
@@ -29,35 +16,22 @@
     z-index: 5;
 }
 
-/*.promo-block:after{
-    content: "";
-    background-image: url("../img/promo_block_brd_btm.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center bottom;
-    min-width: 100%;
-    display: block;
-    height: 100px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}*/
-
-
 .wlc {
-    font-family: Aharoni Bold;
+    font-family: Aharoni Bold, sans-serif;
     font-size: 67px;
+    line-height: 67px;
     text-transform: uppercase;
     font-weight: normal;
     color: #ffffff;
 }
 
 .t-gorg {
+    /*font-family: Arial, sans-serif;*/
     font-family: Logo Menuescript;
     font-style: italic;
-    font-size: 45px;
+    font-size: 51px;
     line-height: 45px;
-    font-weight: bold;
+    font-weight: normal;
     margin-top: 30px;
     color: #ffffff;
  }
@@ -72,17 +46,17 @@
 }
 
 .t-gorg:before {
-    margin-right: 16px;
+    margin-right: 15px;
 }
 
 .t-gorg:after {
     margin-left: 5px;
 }
 
-
 .sedona-promo-h {
-    font-family: Aharoni Bold;
+    font-family: Aharoni Bold, sans-serif;
     font-size: 116px;
+    line-height: 116px;
     font-weight: normal;
     text-transform: uppercase;
     margin-top: 45px;
@@ -94,17 +68,14 @@
 /*-------------------------------------------*/
 
 .reasons-box {
-
-/*    margin-top: 450px;*/
-
-     font-size: 0;
-     line-height: 0;
-     background-color: #ffffff;
-     padding-top: 55px;
-     z-index: 4;
-     -webkit-box-shadow: 0px -10px 6px 0px rgba(0, 0, 0, 0.37);
-     -moz-box-shadow:    0px -10px 6px 0px rgba(0, 0, 0, 0.37);
-     box-shadow:         0px -10px 6px 0px rgba(0, 0, 0, 0.37);
+   font-size: 0;
+   line-height: 0;
+   background-color: #ffffff;
+   padding-top: 55px;
+   z-index: 4;
+   -webkit-box-shadow: 0px -7px 5px 0px rgba(0, 0, 0, 0.4);
+   -moz-box-shadow:    0px -7px 5px 0px rgba(0, 0, 0, 0.4);
+   box-shadow:         0px -7px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 /*  five-reasons-head-box  */
@@ -137,12 +108,18 @@
 }
 
 .reason-content {
-    /*position: relative;*/
     width: 33%;
     float: left;
     color: #ffffff;
     text-align: center;
-    padding: 55px;
+    padding: 95px 55px;
+
+
+    box-shadow:
+   0 1px 4px rgba(0, 0, 0, .3),
+   -23px 0 20px -23px rgba(0, 0, 0, .8),
+   23px 0 20px -23px rgba(0, 0, 0, .8),
+   0 0 40px rgba(0, 0, 0, .1) inset;
     
 }
 
@@ -200,14 +177,20 @@
     background-size: cover;
     background-position: center;
     background-color: #dfdfdf;
+
+    /*background-attachment: fixed;*/
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.9) inset;
+      /*box-shadow: 0 3px 3px #575555 inset; */
+
+
 }
 
 .city-life {
-    background-image: url("../img/reason1_bg.jpg");
+    background-image: url(../img/city_bg.jpg);
 }
 
 .most-d {
-    background-image: url("../img/most_d.jpg");
+    background-image: url(../img/most_d.jpg);
 }
 
 .reason-blockquotes-box {
@@ -229,7 +212,7 @@
     margin: 0 auto;
     width: 80px;
     height: 80px;
-    background-image: url(../../resources/img/s.png);
+    background-image: url(../img/sprite.png);
     background-repeat: no-repeat;    
 }
 
@@ -533,7 +516,6 @@
     color: #81b3d2;
 }
 
-
 .count-inpt {
     border: none;
     background-color: #f2f2f2;
@@ -578,11 +560,6 @@
     position: fixed;
     bottom: 0; 
     left: 0;
-    /*padding: 225px 0;*/
     z-index: 3;
     background-color: #ffffff;
-}
-
-.map-box {
-    /*height: 450px;*/
 }
