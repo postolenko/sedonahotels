@@ -4,15 +4,15 @@ $(document).ready(function() {
 var heightMenu; 			// Высота меню
 
 
-var onePercentOfRow; 		// Величина 1% ширины ".row"
-var percentReasonBg;  		// Величина 1% ширины ".reason-bg"
-var reasonContentHeight;	// Высота ".reason-content"
+var onePercentOfRow; 		
+var percentReasonBg;  		
+var reasonContentHeight;	
 var leftCoor;          		// Ширина от левого края окна до левого края ".row"
 
 
 var searchHtHpgSectCoor;	// Координата ".search-ht-hpg-sect"
 
-var searchBoxMargin;		
+var paddingTopBody;			// Высота меню и отступ страницы от верхнего края окна
 
 
 var mapSectionOffsetTop;	// Координата положения карты
@@ -200,17 +200,17 @@ var countScrollForHeader = 0;
 
 		if( $(window).width() <= 768 ) {
 
-			searchBoxMargin = 50;
+			paddingTopBody = 50;
 
 		} else {
 
 			$("header").height($("header .navigation").outerHeight(true));
 
-			searchBoxMargin = $("header .navigation").outerHeight();
+			paddingTopBody = $("header .navigation").outerHeight();
 
 		}
 
-		$('body').css({"padding-top": searchBoxMargin + "px"});
+		$('body').css({"padding-top": paddingTopBody + "px"});
 
 	}
 
