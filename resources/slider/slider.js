@@ -15,23 +15,19 @@ $(document).ready(function() {
 	if(jQuery.browser.mobile != false) {
 
 		$(".for-slider").addClass("bg-for-mobile");
-		
+
 	} else {
 
 		var documentEvent = "document was downloaded";
 
-		// var resizeDocumentEvent = 0;
-
 		var sliderStart;
 
-		var indexSlide; var numFirstSl;
+		var indexSlide;
 
 		var nextSlider = 1;
 
 		var countScrollForSlider = 0;
 
-
-		// var sliderBox = document.getElementsByClassName("for-slider")[0];
 
 		$(".slide-" + nextSlider ).fadeIn(1700);
 
@@ -116,9 +112,9 @@ $(document).ready(function() {
 	}
 
 
-	function startSlide() {
+	function startSlide() {		
 
-		if ( $(".for-slider").height() <= $(window).scrollTop() ) {					
+		if ( $(window).scrollTop() >= $(".for-slider").height() ) {		
 
 			countScrollForSlider = 0;
 
