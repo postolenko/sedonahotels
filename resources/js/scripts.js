@@ -28,6 +28,9 @@ var countScrollForHeader = 0;
 
 	getPaddingBody();
 	getBackgroundHeader();
+
+	getScrollToTopBtn();
+
 	getReasonBgHeightAndPosition();
 	getMapSize();
 	showMap();
@@ -47,6 +50,7 @@ var countScrollForHeader = 0;
 	$(document).scroll(function() {
 
 			getBackgroundHeader();
+			getScrollToTopBtn();
 			showMap();
 
 	});
@@ -250,23 +254,7 @@ var countScrollForHeader = 0;
 
 			leftCoor = ( $(window).width() - $(".row").width() ) / 2 ;
 
-			if (index % 2 == 0) {
-
-				$(".reason-content:eq("+index+")").css({"float": "left"});
-
-				$(".reason-bg:eq("+index+")").css({"right": 0});
-				
-
-			} else {
-
-				$(".reason-content:eq("+index+")").css({"float": "right"});
-
 		
-				$(".reason-bg:eq("+index+")").css({"left": 0});
-
-				$(".reason:eq("+index+")").css({"background-color":"#eeeeee"});
-
-			}
 
 
 			if( $(window).width() <= 680 ){
@@ -296,10 +284,28 @@ var countScrollForHeader = 0;
 			$(".reason-bg:eq("+ index +")").outerHeight( reasonContentHeight );
 
 
+			if (index % 2 == 0) {
+
+				$(".reason-content:eq("+index+")").css({"float": "left"});
+
+				$(".reason-bg:eq("+index+")").css({"right": 0});
+				
+
+			} else {
+
+				$(".reason-content:eq("+index+")").css({"float": "right"});
+
+		
+				$(".reason-bg:eq("+index+")").css({"left": 0});
+
+				$(".reason:eq("+index+")").css({"background-color":"#eeeeee"});
+
+			}
+
+
 		});
 
 	}
-
 
 
 // Google Map
@@ -350,4 +356,33 @@ var countScrollForHeader = 0;
 	}
 
 	
+//  Показать кнопку прокрутки в вверх страницы
+	function getScrollToTopBtn() {
+		if ($(window).scrollTop() > $('.header').height() ) {
+
+        	$('.scroll-to-top').fadeIn();
+
+        } else {
+
+            $('.scroll-to-top').fadeOut();
+
+        }
+	}
+
+ 
+    $('.scroll-to-top').click(function () {
+
+        $('body,html').animate({
+
+            scrollTop: 0
+
+        }, 1000);
+
+        return false;
+
+    });
+
+
+
+
 });

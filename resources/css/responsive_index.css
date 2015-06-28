@@ -101,7 +101,7 @@
     }
 
     .t-gorg {
-        font-size: 24px;
+        font-size: 34px;
     }
 
     .sedona-promo-h {
@@ -130,10 +130,6 @@
 @media only screen and (max-width: 320px) {
     .wlc {
         font-size: 45px;
-    }
-
-    .t-gorg {
-        font-size: 24px;
     }
 
     .sedona-promo-h {

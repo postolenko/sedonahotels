@@ -22,7 +22,7 @@ $(document).ready(function() {
 		var countScrollForSlider = 0;
 
 
-		var sliderBox = document.getElementsByClassName("for-slider")[0];
+		// var sliderBox = document.getElementsByClassName("for-slider")[0];
 
 		$(".slide-" + nextSlider ).fadeIn(1700);
 
@@ -161,7 +161,7 @@ $(document).ready(function() {
 
 					nextSlider = 1;
 
-					$(".slider-num:eq("+0+")").addClass("bg-slider-num-active");
+					$(".slider-num:eq(" + 0 + ")").addClass("bg-slider-num-active");
 
 					$(".slide-" + nextSlider).fadeIn(2500);
 
