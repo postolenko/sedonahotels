@@ -1,6 +1,6 @@
 // Этот скрипт написан только для того чтоб показать страницу "Гостиницы"
 // Преключение между страницами будет обрабатываться с помощью Back End
-
+// Поэтому не удивляйтесь если в процессе анимации будет горизонтальный скролл.
 $(document).ready(function() {
 
 
@@ -16,7 +16,7 @@ $(function() {
 		
 		namePage = $(".nav-link:eq("+indexMenu+")").text();
 		
-		if(namePage == "Гостиницы") {		
+		if(namePage == "Гостиницы") {
 
 			$(".information-page").fadeOut(300);
 
@@ -29,6 +29,7 @@ $(function() {
 
 			$(".hotels-page").animate({"left":"0"},1000);
 
+			
 		}
 
 		if(namePage == "Информация") {
@@ -40,8 +41,6 @@ $(function() {
 			$("footer").css({"top":"450px"});
 
 			$(".hotels-page").css({"left":"100%"});
-
-			showMap();
 
 		}
 
