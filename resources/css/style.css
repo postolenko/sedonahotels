@@ -19,7 +19,6 @@ html {
     font-family: PT Sans, sans-serif;
     font-size: 21px;
     font-weight: normal;
-    /*text-rendering: optimizeLegibility;*/
 }
 
 html,
@@ -31,12 +30,14 @@ body {
 
 .content {
     position: relative;
+
 }
 
 .wrapper {
     display: table; 
     height: 100%;
     min-width: 100%;
+    overflow-x: none;
 }
 
 .content {
@@ -167,7 +168,6 @@ header {
 }
 
 .nav-link:hover {
-    /*color: #81b3d2;*/
     color: #81a5d2;
 }
 
