@@ -17,6 +17,7 @@ $(document).ready(function() {
 		$(".for-slider").addClass("bg-for-mobile");
 
 	} else {
+		
 		// Else The slider will start
 		var documentEvent = "document was downloaded";
 
@@ -32,12 +33,17 @@ $(document).ready(function() {
 		$(".slide-" + nextSlider ).fadeIn(1700);
 		// How much slides we have
 		var countSliders = $(".for-slider div").length;
+
+		var sliderNumbersList = "";
+
 		// Creating of switch buttons for slides
-		for( i = 1; i<= countSliders; i++) {
-			
-			$(".slider-numbers").append("<div class='slider-num'></div>");
+		for( i = 1; i <= countSliders; i++) {
+
+			sliderNumbersList += "<div class='slider-num'></div>";
 
 		}
+
+		$(".slider-numbers").html(sliderNumbersList);
 		// The first button must be active
 		$(".slider-num:eq("+(nextSlider-1)+")").addClass("bg-slider-num-active");
 		// Calling the function to start this slide show
@@ -113,7 +119,7 @@ $(document).ready(function() {
 
 
 	function startSlide() {		
-
+		// if user doesn't see a slider in his window is no need to continue slide show 
 		if ( $(window).scrollTop() >= $(".for-slider").height() ) {		
 
 			countScrollForSlider = 0;
@@ -124,7 +130,7 @@ $(document).ready(function() {
 
 			}			
 
-		} else {
+		} else { // else slider start
 
 			++countScrollForSlider;
 
