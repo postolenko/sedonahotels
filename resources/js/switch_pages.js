@@ -3,10 +3,6 @@
 // Поэтому не удивляйтесь если в процессе анимации будет горизонтальный скролл.
 $(document).ready(function() {
 
-
-
-$(function() {
-
 	var indexMenu;
 	var namePage;
 
@@ -42,11 +38,11 @@ $(function() {
 
 			$(".hotels-page").css({"left":"100%"});
 
+			getMapSize();
+
 		}
 
 	});
 
-
-});
 
 });
