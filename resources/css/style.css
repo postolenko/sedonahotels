@@ -137,6 +137,10 @@ header {
     z-index: 9;
 }
 
+.menu-btn:before {
+    content: "\2630";
+}
+
 .menu-btn:link,
 .menu-btn:visited {
     color: #000000;
