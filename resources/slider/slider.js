@@ -59,25 +59,25 @@ $(document).ready(function() {
 		});
 
 
-		// $(window).resize(function() {
+		$(window).resize(function() {
 
-		// 	if ( $(window).scrollTop() <= $(".for-slider").height() ) {
+			if ( $(window).scrollTop() <= $(".for-slider").height() ) {
 
-		// 		if( $(window).width() <= 480 ) {
+				if( $(window).width() <= 480 ) {
 
-		// 			clearTimeout(sliderStart);
+					clearTimeout(sliderStart);
 
-		// 		}
+				}
 
-		// 		if($(window).width() > 480  ) {
+				if($(window).width() > 480  ) {
 
-		// 			showSlide();
+					showSlide();
 
-		// 		}
+				}
 
-		// 	}
+			}
 
-		// });
+		});
 
 
 		// If user make cklick on one of them slides buttons - we switch to the needing slide
