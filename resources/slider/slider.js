@@ -89,7 +89,7 @@ $(document).ready(function() {
 					if(countForClearRezize == 1) {
 
 						clearTimeout(sliderStart);
-						console.log("clear");
+						// console.log("clear");
 					}					
 					// else the slide will start
 				} else {   // if($(window).width() > 480 )
@@ -99,7 +99,7 @@ $(document).ready(function() {
 					++countResizeForSlider;
 
 					if(countResizeForSlider == 1 && firstWidth == 0) {
-						console.log("start");
+						// console.log("start");
 						showSlide();
 
 					}					
@@ -181,7 +181,7 @@ $(document).ready(function() {
 
 		// if($(window).width() > 480) {
 
-			// clearTimeout(sliderStart);
+			clearTimeout(sliderStart);
 
 			sliderStart = setTimeout(function() {
 
