@@ -19,9 +19,9 @@ $(document).ready(function() {
 			$("footer").css({"top":"0px"});
 
 			$(".hotels-page").css({
-									"display":"block",
-									"position":"relative"
-								  });
+				"display":"block",
+				"position":"relative"
+			});
 
 			$(".hotels-page").animate({"left":"0"},1000);
 
