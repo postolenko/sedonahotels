@@ -19,9 +19,9 @@ $(document).ready(function() {
 			$("footer").css({"top":"0px"});
 
 			$(".hotels-page").css({
-								   "display":"block",
-								   "position":"relative"
-								});
+									"display":"block",
+									"position":"relative"
+								  });
 
 			$(".hotels-page").animate({"left":"0"},1000);
 
@@ -29,7 +29,7 @@ $(document).ready(function() {
 		}
 
 		if(namePage == "Информация") {
-		
+
 			$(".hotels-page").css({"display":"none"});
 
 			$(".information-page").fadeIn(1000);
@@ -42,9 +42,9 @@ $(document).ready(function() {
 
 
 			$("#map-canvas").css({"width": ($(window).width() + ( $(window).width()/100 )*20 ) + "px",
-							  "margin-left": -$(window).width()/100*20 + "px"});
+				"margin-left": -$(window).width()/100*20 + "px"});
 
-		$("#map-canvas").height($(window).height());
+			$("#map-canvas").height($(window).height());
 
 			// -----------------------
 
