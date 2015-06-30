@@ -38,7 +38,7 @@ $(document).ready(function() {
 
 			$(".hotels-page").css({"left":"100%"});
 
-			// getMapSize();
+			getMapSize();
 
 		}
 
