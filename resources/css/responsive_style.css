@@ -1,6 +1,11 @@
 @media only screen and (max-width: 768px) {
 
-    header {
+    /*header {
+        height: 50px;
+        overflow: hidden;
+    }*/
+
+    .top-nav {
         height: 50px;
         overflow: hidden;
     }

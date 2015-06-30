@@ -185,13 +185,13 @@ var countScrollForHeader = 0;
 
 			heightMenu = ( $(".nav-link").length) * $(".navigation li").outerHeight(true) + $(".logo a").outerHeight(true);
 
-			if( $("header").height() < heightMenu ) {
+			if( $(".top-nav").height() < heightMenu ) {
 
-				$("header").animate({"height": heightMenu + "px"},500);
+				$(".top-nav").animate({"height": heightMenu + "px"},500);
 
 			} else {
 
-				$("header").animate({"height": 50 + "px"},500);
+				$(".top-nav").animate({"height": 50 + "px"},500);
 
 			}
 
@@ -208,9 +208,9 @@ var countScrollForHeader = 0;
 
 		} else {
 
-			$("header").height($("header .navigation").outerHeight(true));
+			$(".top-nav").height($(".top-nav .navigation").outerHeight(true));
 
-			paddingTopBody = $("header .navigation").outerHeight();
+			paddingTopBody = $(".top-nav .navigation").outerHeight();
 
 		}
 
@@ -220,13 +220,13 @@ var countScrollForHeader = 0;
 
 // Определить фон ".header"  
 	function getBackgroundHeader() {
-		if ( $(window).scrollTop() <= $("header").height() ) {					
+		if ( $(window).scrollTop() <= $(".top-nav").height() ) {					
 
 			countScrollForHeader = 0;
 
-			if($("header").hasClass("header-bg")) {
+			if($(".top-nav").hasClass("top-nav-bg")) {
 
-				$("header").removeClass("header-bg");
+				$(".top-nav").removeClass("top-nav-bg");
 
 			}
 
@@ -236,7 +236,7 @@ var countScrollForHeader = 0;
 
 			if( countScrollForHeader == 1 ) {
 
-				$("header").addClass("header-bg");
+				$(".top-nav").addClass("top-nav-bg");
 
 			}	
 
@@ -358,7 +358,7 @@ var countScrollForHeader = 0;
 	
 //  Показать кнопку прокрутки в вверх страницы
 	function getScrollToTopBtn() {
-		if ($(window).scrollTop() > $('.header').height() ) {
+		if ($(window).scrollTop() > $('.top-nav').height() ) {
 
         	$('.scroll-to-top').fadeIn();
 
