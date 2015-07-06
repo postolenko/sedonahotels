@@ -7,6 +7,7 @@ $(document).ready(function() {
 	if(jQuery.browser.mobile != false) {
 
 		$(".for-slider").addClass("bg-for-mobile");
+		$(".tools-slider").css({"display":"none"});
 
 	} else {
 
