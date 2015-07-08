@@ -385,34 +385,34 @@ var countScrollForHeader = 0;
 
 // Через определенный промежуток времени скролим вниз на высоту ".top-nav"
 // Делаем только для спецэффекта. Чисто от души решил написать на чистом JavaScript.
-    $(function() {
+    // $(function() {
 
-	    if($(window).scrollTop() < $(".top-nav").height()) {
+	   //  if($(window).scrollTop() < $(".top-nav").height()) {
 
-	    	var winTop = $(window).scrollTop();
+	   //  	var winTop = $(window).scrollTop();
 
-	    	var downDoc;
+	   //  	var downDoc;
 
-	    	setTimeout(function() {
+	   //  	setTimeout(function() {
 
-		    	downDoc = setInterval(function() {
+		  //   	downDoc = setInterval(function() {
 
-		    		winTop++;
+		  //   		winTop++;
 
-		    		$(window).scrollTop(winTop);   
+		  //   		$(window).scrollTop(winTop);   
 
-		    		if($(window).scrollTop() > $(".top-nav").height()) {
+		  //   		if($(window).scrollTop() > $(".top-nav").height()) {
 
-		    			clearInterval(downDoc);
+		  //   			clearInterval(downDoc);
 
-		    		}
+		  //   		}
 
-		    	},50);
+		  //   	},50);
 
-	    	},1500);
-	    }
+	   //  	},1500);
+	   //  }
     	
-    });
+    // });
 
 
 

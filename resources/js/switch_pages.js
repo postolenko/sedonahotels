@@ -40,9 +40,10 @@ $(document).ready(function() {
 
 			// -----------------------
 
-
+			showMap();
+			
 			$("#map-canvas").css({"width": ($(window).width() + ( $(window).width()/100 )*20 ) + "px",
-								  "margin-left": -1 * $(window).width()/100*20 + "px"});
+								  "margin-left": -$(window).width()/100*20 + "px"});
 
 			$("#map-canvas").height($(window).height());
 
