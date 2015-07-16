@@ -25,20 +25,16 @@ body {
     background-color: #ffffff;
 }
 
-.content {
-    position: relative;
-    overflow-x: hidden; 
-}
-
 .wrapper {
     display: table; 
     height: 100%;
     min-width: 100%;
-    overflow-x: none;
+ /*   overflow-x: none;*/
 }
 
 .content {
-    display:table-row; 
+    position: relative;
+    display:table-row;
     height:100%;
 }
 

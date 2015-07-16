@@ -417,7 +417,9 @@ var countScrollForHeader = 0;
 
 
 
-
+	// Этот скрипт написан только для того чтоб показать страницу "Гостиницы"
+	// Переход между страницами будет обрабатываться через Back End
+	// Поэтому не удивляйтесь что внизу при переходе на страницу "Гостиницы" будет горизонтальный скролл
 
 	var indexMenu;
 	var namePage;
@@ -429,7 +431,7 @@ var countScrollForHeader = 0;
 		namePage = $(".nav-link:eq("+indexMenu+")").text();
 		
 		if(namePage == "Гостиницы") {
-
+			$("html, body").css({"overflow-x":"hidden"});
 			$(".information-page").fadeOut(300);
 
 			$("footer").css({"top":"0px"});
@@ -441,8 +443,15 @@ var countScrollForHeader = 0;
 
 			$(".hotels-page").animate({"left":"0"},1000);
 
+			setTimeout(function() {
+
+				$("html, body").css({"overflow-x":""});
+
+			}, 2000);
 			
 		}
+
+		
 
 		if(namePage == "Информация") {
 
@@ -453,6 +462,7 @@ var countScrollForHeader = 0;
 			$("footer").css({"top":"450px"});
 
 			$(".hotels-page").css({"left":"100%"});
+
 
 			// -----------------------
 
