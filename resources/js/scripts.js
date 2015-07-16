@@ -257,7 +257,7 @@ var countScrollForHeader = 0;
 		
 
 
-			if( $(window).width() <= 680 ){
+			if( $(window).width() <= 768 ){
 
 				// var percentReasonContnet = 47;
 				percentReasonBg = 52;
@@ -419,7 +419,6 @@ var countScrollForHeader = 0;
 
 	// Этот скрипт написан только для того чтоб показать страницу "Гостиницы"
 	// Переход между страницами будет обрабатываться через Back End
-	// Поэтому не удивляйтесь что внизу при переходе на страницу "Гостиницы" будет горизонтальный скролл
 
 	var indexMenu;
 	var namePage;
@@ -431,7 +430,9 @@ var countScrollForHeader = 0;
 		namePage = $(".nav-link:eq("+indexMenu+")").text();
 		
 		if(namePage == "Гостиницы") {
+
 			$("html, body").css({"overflow-x":"hidden"});
+			
 			$(".information-page").fadeOut(300);
 
 			$("footer").css({"top":"0px"});
@@ -447,7 +448,7 @@ var countScrollForHeader = 0;
 
 				$("html, body").css({"overflow-x":""});
 
-			}, 2000);
+			}, 1500);
 			
 		}
 
@@ -463,16 +464,8 @@ var countScrollForHeader = 0;
 
 			$(".hotels-page").css({"left":"100%"});
 
-
-			// -----------------------
-
+			getMapSize();
 			showMap();
-			$("#map-canvas").css({"width": ($(window).width() + ( $(window).width()/100 )*20 ) + "px",
-								  "margin-left": -$(window).width()/100*20 + "px"});
-
-			$("#map-canvas").height($(window).height());
-
-			// -----------------------
 
 		}
 

@@ -1,16 +1,44 @@
 @media only screen and (max-width: 768px) {
 
+    .sedona-promo-h {
+        font-size: 100px;
+    }
+
+    .reason-h {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .reason-description {
+        margin-top: 15px;
+        font-size: 13px;
+        line-height: 19px;
+    }
+
     .reason-content {
-        padding: 30px 15px;
+        padding: 60px 15px;
+        width: 47%;
     }
 
     .blockquote-reason {
         padding: 13px 15px;
+        width: 100%;
     }
 
     .search-ht-form {
         width: 65%;
         padding: 10px 2%;
+    }
+
+    .sch-ht-h {
+        font-size: 24px;
+        line-height: 19px;
+    }
+
+    .sch-ht-btn {
+        padding: 20px 40px;
+        font-size: 18px;
+        line-height: 23px;
     }
 
     .row-form {
@@ -52,7 +80,7 @@
 
 @media only screen and (max-width: 680px) {
  
-    .sedona-promo-h {
+  /*  .sedona-promo-h {
         font-size: 100px;
     }
 
@@ -69,9 +97,9 @@
 
     .reason-content {
         width: 47%;
-    }
+    }*/
 
-    .blockquote-reason {
+/*    .blockquote-reason {
         width: 100%;
     }
 
@@ -85,7 +113,7 @@
         font-size: 18px;
         line-height: 23px;
     }
-
+*/
 
 }
 
