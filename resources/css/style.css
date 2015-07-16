@@ -23,22 +23,11 @@ body {
     height: 100%;
     min-width: 100%;
     background-color: #ffffff;
-
-    /* 
-    " overflow " можно расскоментировать только для спецеффекта показа страницы "Гостиницы"
-    для того чтобы не было горизонтального скрола при переключении
-    между пунктами меню "Информация" и "Гостиницы". Переключение на самом деле будет
-    обрабатываться на "Back End"
-    */
-
-    /*overflow-x: hidden;*/ 
-
-    /* Уберите это свойство и Вы убедитесь что сайт все-таки адаптивный */
 }
 
 .content {
     position: relative;
-
+    overflow-x: hidden; 
 }
 
 .wrapper {
@@ -104,14 +93,14 @@ a {
     z-index: 99;
     font-size: 0;
     line-height: 0;
-    -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.37);
-    -moz-box-shadow:    0px 3px 10px 0px rgba(0, 0, 0, 0.37);
-    box-shadow:         0px 3px 10px 0px rgba(0, 0, 0, 0.37);
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, .37);
+    -moz-box-shadow:    0px 3px 10px 0px rgba(0, 0, 0, .37);
+    box-shadow:         0px 3px 10px 0px rgba(0, 0, 0, .37);
 }
 
 .top-nav-bg {
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIwLjMiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIwLjMiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-    background: rgba(249,249,249,0.3);
+    background: rgba(249,249,249,.3);
 }
 
 .menu-btn {
@@ -215,7 +204,7 @@ a {
     border-radius: 50%;
     z-index: 99;
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJiOTBjNiIgc3RvcC1vcGFjaXR5PSIwLjYiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzJiOTBjNiIgc3RvcC1vcGFjaXR5PSIwLjYiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-    background: rgba(43,144,198,0.6);
+    background: rgba(43,144,198,.6);
 }
 
 .scroll-to-top:before {
